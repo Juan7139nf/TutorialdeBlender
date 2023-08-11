@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,8 +10,6 @@
     <style>
         body{
             font-family: 'Alkatra', cursive;
-            height: auto;
-            overflow: scroll;
         }
         body::-webkit-scrollbar{
             width: 10px;
@@ -23,60 +21,239 @@
     </style>
 </head>
 <body>
-    <div id="header">
+    <header class="header">
+        <div id="logoArriba">
+            <p>Blender</p>
+        </div>
+        <div id="enlacesArriba">
+            <a href="#trailer">Trailer</a>
+            <a href="https://www.blender.org/" target="_blank" rel="noopener noreferrer">Web Oficial</a>
+            <a href="https://docs.blender.org/manual/en/latest/index.html" target="_blank" rel="noopener noreferrer">Manual</a>
+            <a href="https://www.blender.org/download/" target="_blank" rel="noopener noreferrer">Download</a>
+        </div>        
+        <nav id="menu">
+            <li><a href="#preguntas">Preguntas</a></li>
+            <li><a href="#layout">Layout</a></li>
+            <li><a href="#modeling">Modeling</a></li>
+            <li><a href="#sculpting">Sculpting</a></li>
+            <li><a href="#uvEdting">UV Edting</a></li>
+            <li><a href="#texturePaint">Texture Paint</a></li>
+            <li><a href="#shading">Shading</a></li>
+            <li><a href="#animation">Animation</a></li>
+            <li><a href="#rendering">Rendering</a></li>
+            <li><a href="#trailer">Trailer</a></li>
+            <li><a href="#shaderElement">Shader element</a></li>
+        </nav>
+    </header>
+    <div class="tituloPrincipal">
         <h1>Blender</h1>
     </div>
-    <div id="contenido">
-        <h2>Preguntas</h2>
+    <div id="bgPreguntas">
+        <h2 id="preguntas">Preguntas</h2>
         <div id="preguntas" style="display: none;">
-            <h3>¿Qué es la Topología y Retopología?</h3>
-            <p><b>Topología:</b> Es la estructura de la malla tridimensional de un objeto 3D formado de vértices, aristas y caras para formar la forma del objeto. Esto es escencial para lograr un modelado limpio que es capaz de deformarse correctamente durante la animación y el rigging.<br><b>Retopología:</b> Es ajustar la topología de un objeto 3D para mejorar la calidad del modelo, corregir problemas de topología y adaptar un modelo de alta resolución para el uso en animación o juegos en tiempo real. En la retopología es importante mantener detalles escenciales o coplejos y reducir detalles en zonas simples que no tienen muchos detalles.</p>
-            <h3>¿Qué son los Workspace?</h3>
-            <p>Son espacios de trabajo diseñados para realizar una tarea especifica.</p>
-            <h3>¿Qué es Layout (Diseño)?</h3>
-            <p>Este es el espacio de trabajo predeterminado que ofrece una interfaz equilibrada con ventanas 3D, de nodos y propiedades.</p>
-            <h3>¿Qué es Modeling (Modelado)?</h3>
-            <p>Optimizado para la creación y manipulación de geometría en 3D.</p>
-            <h3>¿Qué es Sculpting (Esculpir)?</h3>
-            <p>Diseñado para esculpir y modelar detalles orgánicos en modelos.</p>
-            <h3>¿Qué es UV Edting (Edición de UV)?</h3>
-            <p>Para desplegar y editar las coordenadas UV de modelos.</p>            
-            <h3>¿Qué es Texture Paint (Pintura de Texturas)?</h3>
-            <p>Para pintar directamente sobre modelos en 3D.</p>
-            <h3>¿Qué es Shading (Sombreado)?</h3>
-            <p>Enfocado en la creación y ajuste de materiales y texturas.</p>
-            <h3>¿Qué es Animation (Animación)?</h3>
-            <p>Diseñado para la creación y manipulación de animaciones.</p>
-            <h3>¿Qué es Rendering (Renderizado)?</h3>
-            <p>Enfocado en configurar y ajustar opciones de renderizado.</p>
+            <section class="bloqueGrid">
+                <div class="visualizarimg">
+                    <h3>¿Qué es la Topología y Retopología?</h3>
+                    <p><b>Topología:</b> Es la estructura de la malla tridimensional de un objeto 3D formado de vértices, aristas y caras para formar la forma del objeto. Esto es escencial para lograr un modelado limpio que es capaz de deformarse correctamente durante la animación y el rigging.<br><b>Retopología:</b> Es ajustar la topología de un objeto 3D para mejorar la calidad del modelo, corregir problemas de topología y adaptar un modelo de alta resolución para el uso en animación o juegos en tiempo real. En la retopología es importante mantener detalles escenciales o coplejos y reducir detalles en zonas simples que no tienen muchos detalles.</p>
+                </div>
+                <div class="visualizarimg">
+                    <h3>¿Qué son los Workspace?</h3>
+                    <p>Son espacios de trabajo diseñados para realizar una tarea especifica.</p>
+                </div>
+                <div class="visualizarimg">
+                    <h3>¿Qué es Layout (Diseño)?</h3>
+                    <p>Este es el espacio de trabajo predeterminado que ofrece una interfaz equilibrada con ventanas 3D, de nodos y propiedades.</p></div>
+                <div class="visualizarimg">
+                    <h3>¿Qué es Modeling (Modelado)?</h3>
+                    <p>Optimizado para la creación y manipulación de geometría en 3D.</p>
+                </div>
+                <div class="visualizarimg">
+                    <h3>¿Qué es Sculpting (Esculpir)?</h3>
+                    <p>Diseñado para esculpir y modelar detalles orgánicos en modelos.</p>
+                </div>
+                <div class="visualizarimg">
+                    <h3>¿Qué es UV Edting (Edición de UV)?</h3>
+                    <p>Para desplegar y editar las coordenadas UV de modelos.</p>            
+                </div>
+                <div class="visualizarimg">
+                    <h3>¿Qué es Texture Paint (Pintura de Texturas)?</h3>
+                    <p>Para pintar directamente sobre modelos en 3D.</p>
+                </div>
+                <div class="visualizarimg">
+                    <h3>¿Qué es Shading (Sombreado)?</h3>
+                    <p>Enfocado en la creación y ajuste de materiales y texturas.</p>
+                </div>
+                <div class="visualizarimg">
+                    <h3>¿Qué es Animation (Animación)?</h3>
+                    <p>Diseñado para la creación y manipulación de animaciones.</p>
+                </div>
+                <div class="visualizarimg">
+                    <h3>¿Qué es Rendering (Renderizado)?</h3>
+                    <p>Enfocado en configurar y ajustar opciones de renderizado.</p>
+                </div>
+            </section>                
         </div>
-        <h2>Layout (Diseño)</h2>
-            <div class="atajo">
-                <section>
-                    <h3>Atajos de teclado</h3>
+    </div>
+    <div id="bgLayout">
+        <h2 id="layout">Layout (Diseño)</h2>
+        <div class="atajo" style="display: block;">
+            <h3>Atajos de teclado</h3>
+            <section class="bloqueGrid">
+                <div class="tablas">
                     <table>
-                        <tr><h4>Render</h4></tr>
+                        <h4>Archivo</h4>
+                        <tr>
+                            <td>Guardar</td>
+                            <td><b>Ctrl </b>+<b> S</b></td>
+                        </tr>
+                        <tr>
+                            <td>Guardar como</td>
+                            <td><b>Ctrl </b>+<b> Shift </b>+<b> S</b></td>
+                        </tr>
+                        <tr>
+                            <td>Nuevo Archivo</td>
+                            <td><b>Ctrl </b>+<b> N</b></td>
+                        </tr>
+                        <tr>
+                            <td>Cerrar Blender</td>
+                            <td><b>Ctrl </b>+<b> Q</b></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="tablas">
+                    <table>
+                        <h4>Render</h4>
                         <tr>
                             <td>Renderizar Imagen</td>
                             <td><b>F12</b></td>
                         </tr>
                         <tr>
                             <td>Renderizar Animación</td>
-                            <td><b>Ctrl + F12</b></td>
+                            <td><b>Ctrl </b>+<b> F12</b></td>
                         </tr>
                     </table>
-                </section>
-            </div>
-        <h2>Modeling (Modelado)</h2>
-        <h2>Sculpting (Esculpir)</h2>
-        <h2>UV Edting (Edición de UV)</h2>
-        <h2>Texture Paint (Pintura de Texturas)</h2>
-        <h2>Shading (Sombreado)</h2>
-        <h2>Animation (Animación)</h2>
-        <h2>Rendering (Renderizado)</h2>
+                </div>
+            </section>
+        </div>
     </div>
-    <div id="footer">
-        
+    <div id="bgModeling">
+        <h2 id="modeling">Modeling (Modelado)</h2>
+        <div class="atajo" style="display: block;">
+            <h3>Atajos de teclado</h3>
+            <section class="bloqueGrid">
+                <div class="tablas">
+                    <table>
+                        <h4>Selección</h4>
+                        <tr>
+                            <td>Selección de Vértices</td>
+                            <td><b>1</b></td>
+                        </tr>
+                        <tr>
+                            <td>Selección de Aristas</td>
+                            <td><b>2</b></td>
+                        </tr>
+                        <tr>
+                            <td>Selección de Caras</td>
+                            <td><b>3</b></td>
+                        </tr>
+                        <tr>
+                            <td>Crecer / Reducir selección</td>
+                            <td><b>Ctrl </b>+<b> + / -</b></td>
+                        </tr>
+                        <tr>
+                            <td>Seleccionar Loop de Aristas</td>
+                            <td><b>Alt </b>+<b> Botón Derecho Ratón</b></td>
+                        </tr>
+                        <tr>
+                            <td>Seleccionar Aristas Paralelas (Edge ring)</td>
+                            <td><b>Ctrl </b>+<b>Alt </b>+<b> Botón Derecho Ratón</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="tablas">
+                    <table>
+                        <h4>Herramientas</h4>
+                        <tr>
+                            <td>Extrude</td>
+                            <td><b>E</b></td>
+                        </tr>
+                        <tr>
+                            <td>Fill Face</td>
+                            <td><b>F</b></td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+        </div>
     </div>
+    <div id="bgSculting">
+        <h2 id="sculpting">Sculpting (Esculpir)</h2>
+        <div class="atajo" style="display: block;">
+            <h3>Atajos de teclado</h3>
+            <section class="bloqueGrid">
+                <div class="tablas">
+                    <table>
+                        <h4>Control</h4>
+                        <tr>
+                            <td>Modo de Trazado</td>
+                            <td><b>E</b></td>
+                        </tr>
+                        <tr>
+                            <td>Control del ángulo</td>
+                            <td><b>R</b></td>
+                        </tr>
+                        <tr>
+                            <td>Tamaño Brocha</td>
+                            <td><b>F</b></td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+        </div>
+    </div>
+    <div id="bgUvedting">
+        <h2 id="uvEdting">UV Edting (Edición de UV)</h2>
+    </div>
+    <div id="bgTexturePaint">
+        <h2 id="texturePaint">Texture Paint (Pintura de Texturas)</h2>
+    </div>
+    <div id="bgShading">
+        <h2 id="shading">Shading (Sombreado)</h2>
+        <div class="atajo" style="display: block;">
+            <h3>Atajos de teclado</h3>
+            <section class="bloqueGrid">
+                <div class="tablas">
+                    <table>
+                        <h4>General</h4>
+                        <tr>
+                            <td>Crear Nodo</td>
+                            <td><b>Shift </b>+<b> A</b></td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+        </div>
+    </div>
+    <div id="bgAnimation">
+        <h2 id="animation">Animation (Animación)</h2>
+    </div>
+    <div id="bgRendering">
+        <h2 id="rendering">Rendering (Renderizado)</h2>
+    </div>
+    <div id="bgTrailer">
+        <h2 id="trailer">Trailer de Blender</h2>
+        <div class="trailer">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/BnY2JdBrvaI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/QRqY_20ti9A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/ZbvTS1pmN0s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/YbL-rJv3BpI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+    </div>
+    <div id="bgShaderElement">            
+        <h2 id="shaderElement">Shader Element</h2>
+    </div>
+    <footer>
+        <p>Derechos de autor &copy; Juan Nicolas Flores Delgado</p>
+    </footer>
 </body>
 </html>
