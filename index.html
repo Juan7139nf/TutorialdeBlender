@@ -25,13 +25,13 @@
         <div id="logoArriba">
             <p>Blender</p>
         </div>
-        <div id="enlacesArriba">
+        <nav>
             <a href="#trailer">Trailer</a>
             <a href="https://www.blender.org/" target="_blank" rel="noopener noreferrer">Web Oficial</a>
             <a href="https://docs.blender.org/manual/en/latest/index.html" target="_blank" rel="noopener noreferrer">Manual</a>
             <a href="https://www.blender.org/download/" target="_blank" rel="noopener noreferrer">Download</a>
-        </div>        
-        <nav id="menu">
+        </nav>        
+        <aside>
             <li><a href="#preguntas">Preguntas</a></li>
             <li><a href="#layout">Layout</a></li>
             <li><a href="#modeling">Modeling</a></li>
@@ -43,63 +43,73 @@
             <li><a href="#rendering">Rendering</a></li>
             <li><a href="#trailer">Trailer</a></li>
             <li><a href="#shaderElement">Shader element</a></li>
-        </nav>
+        </aside>
     </header>
     <div class="tituloPrincipal">
         <h1>Blender</h1>
     </div>
-    <div id="bgPreguntas">
+    <section id="bgPreguntas">
         <h2 id="preguntas">Preguntas</h2>
-        <div id="preguntas" style="display: none;">
+        <div id="preguntas" style="display: block;">
             <section class="bloqueGrid">
-                <div class="visualizarimg">
+                <article class="visualizarimg">
                     <h3>¿Qué es la Topología y Retopología?</h3>
                     <p><b>Topología:</b> Es la estructura de la malla tridimensional de un objeto 3D formado de vértices, aristas y caras para formar la forma del objeto. Esto es escencial para lograr un modelado limpio que es capaz de deformarse correctamente durante la animación y el rigging.<br><b>Retopología:</b> Es ajustar la topología de un objeto 3D para mejorar la calidad del modelo, corregir problemas de topología y adaptar un modelo de alta resolución para el uso en animación o juegos en tiempo real. En la retopología es importante mantener detalles escenciales o coplejos y reducir detalles en zonas simples que no tienen muchos detalles.</p>
-                </div>
-                <div class="visualizarimg">
+                </article>
+                <article class="visualizarimg">
                     <h3>¿Qué son los Workspace?</h3>
+                    <img src="src/img/workspaceBlender.jpg" alt="">
                     <p>Son espacios de trabajo diseñados para realizar una tarea especifica.</p>
-                </div>
-                <div class="visualizarimg">
+                </article>
+                <article class="visualizarimg">
                     <h3>¿Qué es Layout (Diseño)?</h3>
-                    <p>Este es el espacio de trabajo predeterminado que ofrece una interfaz equilibrada con ventanas 3D, de nodos y propiedades.</p></div>
-                <div class="visualizarimg">
+                    <img src="src/img/layoutBlender.jpg" alt="">
+                    <p>Este es el espacio de trabajo predeterminado que ofrece una interfaz equilibrada con ventanas 3D, de nodos y propiedades.</p>
+                </article>
+                <article class="visualizarimg">
                     <h3>¿Qué es Modeling (Modelado)?</h3>
+                    <img src="src/img/modelingBlender.jpg" alt="">
                     <p>Optimizado para la creación y manipulación de geometría en 3D.</p>
-                </div>
-                <div class="visualizarimg">
+                </article>
+                <article class="visualizarimg">
                     <h3>¿Qué es Sculpting (Esculpir)?</h3>
+                    <img src="src/img/sculptingBlender.jpg" alt="">
                     <p>Diseñado para esculpir y modelar detalles orgánicos en modelos.</p>
-                </div>
-                <div class="visualizarimg">
+                </article>
+                <article class="visualizarimg">
                     <h3>¿Qué es UV Edting (Edición de UV)?</h3>
+                    <img src="src/img/uvEdtingBlender.jpg" alt="">
                     <p>Para desplegar y editar las coordenadas UV de modelos.</p>            
-                </div>
-                <div class="visualizarimg">
+                </article>
+                <article class="visualizarimg">
                     <h3>¿Qué es Texture Paint (Pintura de Texturas)?</h3>
+                    <img src="src/img/texturePaintBlender.jpg" alt="">
                     <p>Para pintar directamente sobre modelos en 3D.</p>
-                </div>
-                <div class="visualizarimg">
+                </article>
+                <article class="visualizarimg">
                     <h3>¿Qué es Shading (Sombreado)?</h3>
+                    <img src="src/img/shadingBlender.jpg" alt="">
                     <p>Enfocado en la creación y ajuste de materiales y texturas.</p>
-                </div>
-                <div class="visualizarimg">
+                </article>
+                <article class="visualizarimg">
                     <h3>¿Qué es Animation (Animación)?</h3>
+                    <img src="src/img/animationBlender.jpg" alt="">
                     <p>Diseñado para la creación y manipulación de animaciones.</p>
-                </div>
-                <div class="visualizarimg">
+                </article>
+                <article class="visualizarimg">
                     <h3>¿Qué es Rendering (Renderizado)?</h3>
+                    <img src="src/img/renderingBlender.jpg" alt="">
                     <p>Enfocado en configurar y ajustar opciones de renderizado.</p>
-                </div>
+                </article>
             </section>                
         </div>
-    </div>
-    <div id="bgLayout">
+    </section>
+    <section id="bgLayout">
         <h2 id="layout">Layout (Diseño)</h2>
         <div class="atajo" style="display: block;">
             <h3>Atajos de teclado</h3>
             <section class="bloqueGrid">
-                <div class="tablas">
+                <article class="tablas">
                     <table>
                         <h4>Archivo</h4>
                         <tr>
@@ -120,28 +130,15 @@
                         </tr>
                     </table>
                 </div>
-                <div class="tablas">
-                    <table>
-                        <h4>Render</h4>
-                        <tr>
-                            <td>Renderizar Imagen</td>
-                            <td><b>F12</b></td>
-                        </tr>
-                        <tr>
-                            <td>Renderizar Animación</td>
-                            <td><b>Ctrl </b>+<b> F12</b></td>
-                        </tr>
-                    </table>
-                </div>
             </section>
         </div>
-    </div>
-    <div id="bgModeling">
+    </section>
+    <section id="bgModeling">
         <h2 id="modeling">Modeling (Modelado)</h2>
         <div class="atajo" style="display: block;">
             <h3>Atajos de teclado</h3>
             <section class="bloqueGrid">
-                <div class="tablas">
+                <article class="tablas">
                     <table>
                         <h4>Selección</h4>
                         <tr>
@@ -169,8 +166,8 @@
                             <td><b>Ctrl </b>+<b>Alt </b>+<b> Botón Derecho Ratón</td>
                         </tr>
                     </table>
-                </div>
-                <div class="tablas">
+                </article>
+                <article class="tablas">
                     <table>
                         <h4>Herramientas</h4>
                         <tr>
@@ -182,16 +179,16 @@
                             <td><b>F</b></td>
                         </tr>
                     </table>
-                </div>
+                </article>
             </section>
         </div>
-    </div>
-    <div id="bgSculting">
+    </section>
+    <section id="bgSculting">
         <h2 id="sculpting">Sculpting (Esculpir)</h2>
         <div class="atajo" style="display: block;">
             <h3>Atajos de teclado</h3>
             <section class="bloqueGrid">
-                <div class="tablas">
+                <article class="tablas">
                     <table>
                         <h4>Control</h4>
                         <tr>
@@ -207,52 +204,262 @@
                             <td><b>F</b></td>
                         </tr>
                     </table>
-                </div>
+                </article>
             </section>
         </div>
-    </div>
-    <div id="bgUvedting">
+    </section>
+    <section id="bgUvedting">
         <h2 id="uvEdting">UV Edting (Edición de UV)</h2>
-    </div>
-    <div id="bgTexturePaint">
+        <div class="atajo" style="display: block;">
+            <h3>Atajos de teclado</h3>
+            <section class="bloqueGrid">
+                <article class="tablas">
+                    <table>
+                        <h4>Editor de UV</h4>
+                        <tr>
+                            <td>Seleccionar Todo</td>
+                            <td><b>A</b></td>
+                        </tr>
+                        <tr>
+                            <td>Deshacer última acción</td>
+                            <td><b>Ctrl </b>+<b> Z</b></td>
+                        </tr>
+                        <tr>
+                            <td>Rehacer acción</td>
+                            <td><b>Ctrl </b>+<b> Shift </b>+<b> Z</b></td>
+                        </tr>
+                        <tr>
+                            <td>Cortar la Selección</td>
+                            <td><b>Ctrl </b>+<b> X</b></td>
+                        </tr>
+                        <tr>
+                            <td>Copiar la Selección</td>
+                            <td><b>Ctrl </b>+<b> C</b></td>
+                        </tr>
+                        <tr>
+                            <td>Pegar la Selección</td>
+                            <td><b>Ctrl </b>+<b> V</b></td>
+                        </tr>
+                        <tr>
+                            <td>Duplicar la Selección</td>
+                            <td><b>Shift </b>+<b> D</b></td>
+                        </tr>
+                        <tr>
+                            <td>Girar UVs</td>
+                            <td><b>R</b></td>
+                        </tr>
+                        <tr>
+                            <td>Escalar UVs</td>
+                            <td><b>S</b></td>
+                        </tr>
+                        <tr>
+                            <td>Desplazar UVs</td>
+                            <td><b>G</b></td>
+                        </tr>                        
+                        <tr>
+                            <td>Mostrar Coordenadas UV</td>
+                            <td><b>N</b></td>
+                        </tr>
+                        <tr>
+                            <td>Mostrar Panel de Herramientas</td>
+                            <td><b>T</b></td>
+                        </tr>
+                    </table>
+                </article>
+            </section>
+        </div>
+    </section>
+    <section id="bgTexturePaint">
         <h2 id="texturePaint">Texture Paint (Pintura de Texturas)</h2>
-    </div>
-    <div id="bgShading">
+        <div class="atajo" style="display: block;">
+            <h3>Atajos de teclado</h3>
+            <section class="bloqueGrid">
+                <article class="tablas">
+                    <table>
+                        <h4>Paint (Editor Imagen)</h4>                        
+                        <tr>                            
+                            <td>Cambiar a modo Pincel</td>
+                            <td><b>T</b></td>
+                        </tr>
+                        <tr>                            
+                            <td>Cambiar tamaño de Pincel más Grande</td>
+                            <td><b>F</b></td>
+                        </tr>
+                        <tr>
+                            <td>Cambiar tamaño de Pincel más Grande</td>
+                            <td><b>Shift </b>+<b> F</b></td>
+                        </tr>
+                        <tr>
+                            <td>Cambiar a herramienta de rellenar</td>
+                            <td><b>Ctrl </b>+<b> F</b></td>
+                        </tr>
+                        <tr>                            
+                            <td>Cambiar a herramienta de Pincel</td>
+                            <td><b>B</b></td>
+                        </tr>
+                    </table>
+                </article>
+            </section>
+        </div>
+    </section>
+    <section id="bgShading">
         <h2 id="shading">Shading (Sombreado)</h2>
         <div class="atajo" style="display: block;">
             <h3>Atajos de teclado</h3>
             <section class="bloqueGrid">
-                <div class="tablas">
+                <article class="tablas">
                     <table>
                         <h4>General</h4>
                         <tr>
                             <td>Crear Nodo</td>
                             <td><b>Shift </b>+<b> A</b></td>
                         </tr>
+                        <tr>                            
+                            <td>Eliminar Nodo</td>
+                            <td><b>X</b></td>
+                        </tr>
                     </table>
-                </div>
+                </article>
+                <article class="tablas">
+                    <table>
+                        <h4>Editor de UV</h4>
+                        <tr>
+                            <td>Marcar Seams (Costuras)</td>
+                            <td><b>Ctrl </b>+<b> E</b></td>
+                        </tr>
+                        <tr>
+                            <td>Seleccionar Split</td>
+                            <td><b>Y</b></td>
+                        </tr>
+                        <tr>
+                            <td>Crecer / Decrecer selección</td>
+                            <td><b>Ctrl </b>+<b> + / -</b></td>
+                        </tr>
+                        <tr>
+                            <td>Stitch (Coser)</td>
+                            <td><b>V</b></td>
+                        </tr>
+                        <tr>
+                            <td>Pin</td>
+                            <td><b>P</b></td>
+                        </tr>
+                        <tr>
+                            <td>Unpin</td>
+                            <td><b>Alt </b>+<b> P</b></td>
+                        </tr>
+                    </table>
+                    <article class="tablas">
+                        <table>
+                            <h4>Paint (Editor Imagen)</h4>                        
+                            <tr>                            
+                                <td>Muestra de Color</td>
+                                <td><b>S</b></td>
+                            </tr>
+                            <tr>                            
+                                <td>Tamaño Brocha</td>
+                                <td><b>F</b></td>
+                            </tr>
+                            <tr>
+                                <td>Fuerza Brocha</td>
+                                <td><b>Shift </b>+<b> F</b></td>
+                            </tr>
+                            <tr>                            
+                                <td>Dar la vuelta a los clores (Flip)</td>
+                                <td><b>X</b></td>
+                            </tr>
+                        </table>
+                    </article>
+                </article>
             </section>
         </div>
-    </div>
-    <div id="bgAnimation">
+    </section>
+    <section id="bgAnimation">
         <h2 id="animation">Animation (Animación)</h2>
-    </div>
-    <div id="bgRendering">
+        <div class="atajo" style="display: block;">
+            <h3>Atajos de teclado</h3>
+            <section class="bloqueGrid">
+                <article class="tablas">
+                    <table>
+                        <h4>Keyframes</h4>
+                        <tr>
+                            <td>Insertar Keyframes</td>
+                            <td><b>I</b></td>
+                        </tr>
+                        <tr>
+                            <td>Borrar Keyframe</td>
+                            <td><b>Alt </b>+<b> I</b></td>
+                        </tr>
+                    </table>
+                </article>
+            </section>
+        </div>
+    </section>
+    <section id="bgRendering">
         <h2 id="rendering">Rendering (Renderizado)</h2>
-    </div>
-    <div id="bgTrailer">
+        <div class="atajo" style="display: block;">
+            <h3>Atajos de teclado</h3>
+            <section class="bloqueGrid">
+                <article class="tablas">
+                    <table>
+                        <h4>Render</h4>
+                        <tr>
+                            <td>Renderizar Imagen</td>
+                            <td><b>F12</b></td>
+                        </tr>
+                        <tr>
+                            <td>Renderizar Animación</td>
+                            <td><b>Ctrl </b>+<b> F12</b></td>
+                        </tr>
+                    </table>
+                </article>
+            </section>            
+            <img src="src/img/resultBlender.jpg" alt="">
+        </div>
+    </section>
+    <section id="bgTrailer">
         <h2 id="trailer">Trailer de Blender</h2>
-        <div class="trailer">
+        <section class="trailer">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/BnY2JdBrvaI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/QRqY_20ti9A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/ZbvTS1pmN0s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/YbL-rJv3BpI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        </div>
-    </div>
-    <div id="bgShaderElement">            
+        </section>
+    </section>
+    <section id="bgShaderElement">            
         <h2 id="shaderElement">Shader Element</h2>
-    </div>
+        <section id="imageShaders">
+            <img src="src/img/shaders01.jpg" alt="">
+            <img src="src/img/shaders02.jpg" alt="">
+            <img src="src/img/shaders03.jpg" alt="">
+            <img src="src/img/shaders04.jpg" alt="">
+            <img src="src/img/shaders05.jpg" alt="">
+            <img src="src/img/shaders06.jpg" alt="">
+        </section>
+    </section>
     <footer>
+        <section id="contactarnos">
+            <form action="#" method="post">
+                <ul>
+                    <li>
+                        <label for="name">¿Cuál es tu nombre o apodo?</label>
+                        <input type="text" name="usuarioName" id="name">
+                    </li>
+                    <li>
+                        <label for="like">¿Te gusto la página?</label>
+                        <select name="usuarioLike" id="like">
+                            <option value="si">Sí</option>
+                            <option value="masomenos">Masomenos</option>
+                            <option value="no">No</option>
+                        </select>
+                    </li>
+                    <li>
+                        <label for="coment">Comentario</label>
+                        <textarea name="usuarioComent" id="coment" cols="30" rows="3"></textarea>
+                    </li>
+                    <button>Enviar</button>
+                </ul>
+            </form>
+        </section>
         <p>Derechos de autor &copy; Juan Nicolas Flores Delgado</p>
     </footer>
 </body>
