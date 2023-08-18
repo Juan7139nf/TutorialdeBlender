@@ -5,6 +5,9 @@ body{
     font-family: 'Alkatra', cursive;
     background-color: #111111;
     color: #ffffff;
+    .espaciado{
+        height: 30px;
+    }
 }
 body::-webkit-scrollbar{
     width: 10px;
@@ -14,30 +17,35 @@ body::-webkit-scrollbar-thumb{
     border-radius: 5px;
 }
 header{
-    position: fixed;
+    position: sticky;
+    top: 0;
     background-color: #ffa500;
-    display: flex;
-    width: 100%;
-}
-#logo{
-    font-weight: bold;
-}
-li{
-    list-style: none;
-}
-a{    
-    color: #ffffff;
-    text-decoration: none;
-    padding: 0 20px;      
-    border-radius: 6px;
-    background-color: #ffa500;
-}
-a:hover{
-    color: #000000;
-    background-color: #00ffa5;
-}
-.espaciado{
-    height: 30px;
+    width: 100%;    
+    #logo{
+        font-weight: bold;
+    }
+    & nav{
+        width: 90%;
+    }
+    .desplegableContenido{
+        display: flex;
+        text-align: right;
+        width: 80%;
+    }
+    & li{
+        list-style: none;
+    }
+    & a{    
+        color: #ffffff;
+        text-decoration: none;
+        padding: 0 20px;      
+        border-radius: 6px;
+        background-color: #ffa500;
+    }
+    & a:hover{
+        color: #000000;
+        background-color: #00ffa5;
+    }
 }
 #title{
     height: 50px;
@@ -61,45 +69,115 @@ h4{
 }
 .section{
     width: 95%;
-    margin: 20px auto;
+    margin: 0 auto;
     border-radius: 8px;
     background-color: #222222;
     border-left: 5px solid #ffa500;
+    padding-bottom: 7px;
+    .atajo{
+        width: 98%;
+        margin: 0 auto;
+        border-radius: 9px;
+        background-color: #333333;
+        padding-bottom: 5px;        
+        text-align: right;
+        #imgRender{
+            border-radius: 50px;
+        }
+        .bloqueGrid{
+            width: 98%;
+            margin: 0 auto;
+            display: grid;
+            gap: 20px;
+            background-color: #444444;
+            border-radius: 10px;
+            .tablas{
+                width: auto;
+                height: auto;
+                margin: 20px;
+                padding: 0 10px;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+                & table{
+                    width: auto;
+                    border-collapse: collapse;
+                    margin-bottom: 10px;
+                    & td{
+                        border: 1px solid #ddd;
+                        padding: 8px;
+                        text-align: left;
+                        & b{
+                            color: #ffa500;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
-.bloqueGrid{
-    width: 96%;
-    margin: auto;
-    display: grid;
-    gap: 20px;
-    background-color: #333333;
-    border-radius: 10px;
-}
-.tablas{
-    width: 300px;
-    margin: 20px;
-    padding: 0px 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-table{
-    width: 300px;
-    border-collapse: collapse;
-    margin-bottom: 10px;
-}
-th, td{
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: left;
-}
-footer{
+.footer{
     background-color: #000000;
-    text-align: center;
-    columns: 400px 2;
-}
-.contactarnos{
-    margin: 30px auto;
-    align-content: center;
-}
-#derechosAutor{
-    padding: 20px 0;
+    border-radius: 0 50px 0 0;
+    border-top: 11px solid #ffa500;
+    border-right: 5px solid #ffa500;
+    justify-content: space-between;
+    .contactarnos{
+        height: 350px;
+        padding: 15px;
+        & li > label{
+            display: block;
+            color: #ffa500;
+        }
+        & input[type="text"], textarea{
+            border-radius: 7px;
+            padding: 5px;
+            text-align: center;
+            font-size: 18px;            
+            font-family: 'Alkatra', cursive;
+            margin-bottom: 10px;
+        }
+        .calificacion{
+            margin: 0 auto;
+            display: flexbox;
+            font-size: 25px;
+            & label{
+                padding: 0 15px;
+                cursor: pointer;
+                color: #777777;
+            }
+            & input[type="radio"]{
+                display: none;
+            }
+            & label:hover ~ label{
+                color: #ffa500;
+            }
+            & input[type="radio"]:checked ~ label{
+                color: #ffa500;
+            }
+        }
+        & button{            
+            font-family: 'Alkatra', cursive;
+            font-size: 21px;
+            padding: 0 15px;
+            border: none;
+            cursor: pointer;
+            margin-bottom: 17px;
+            border-radius: 6px;
+            background-color: #00ffa5;
+        }
+        & button:hover{
+            background-color: #ffa500;
+            color: #ffffff;
+        }
+    }    
+    #whatsApp{
+        text-align: center;
+    }
+    #contactarnosWhatsapp{
+        font-size: 18px;
+    }
+    #derechosAutor{
+        text-align: right;
+        padding: 20px 25px;
+    }
 }

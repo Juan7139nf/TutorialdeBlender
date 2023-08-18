@@ -10,39 +10,30 @@
     <link rel="stylesheet" href="src/css/style.css">
 </head>
 <body>
+    <h1 id="titulo arriba">Tutorial de Blender</h1>
     <header class="header">
         <a href="#" id="logo">Blender</a>
-        <nav style="display: none;">
-            <ul class="desplegableContenido">
-                <li>
-                    <a href="#trailer">Trailer</a>
-                </li>
-                <li>
-                    <a href="https://www.blender.org/" target="_blank" rel="noopener noreferrer">Web Oficial</a>
-                </li>
-                <li>
-                    <a href="https://docs.blender.org/manual/en/latest/index.html" target="_blank" rel="noopener noreferrer">Manual</a>
-                </li>
-                <li>
-                    <a href="https://www.blender.org/download/" target="_blank" rel="noopener noreferrer">Download</a>            
-                </li>
-                <li>
-                    <a href="#" class="menuDesplagable">Menú</a>
-                    <ul class="despegableFormato">
-                        <li><a href="#preguntas">Preguntas</a></li>
-                        <li><a href="#layout">Layout</a></li>
-                        <li><a href="#modeling">Modeling</a></li>
-                        <li><a href="#sculpting">Sculpting</a></li>
-                        <li><a href="#uvEdting">UV Edting</a></li>
-                        <li><a href="#texturePaint">Texture Paint</a></li>
-                        <li><a href="#shading">Shading</a></li>
-                        <li><a href="#animation">Animation</a></li>
-                        <li><a href="#rendering">Rendering</a></li>
-                        <li><a href="#trailer">Trailer</a></li>
-                        <li><a href="#shaderElement">Shader element</a></li>
-                    </ul>
-                </li>
-            </ul>
+        <nav class="desplegableContenido">
+            <a href="#trailer">Trailer</a>
+            <a href="https://www.blender.org/" target="_blank" rel="noopener noreferrer">Web Oficial</a>
+            <a href="https://docs.blender.org/manual/en/latest/index.html" target="_blank" rel="noopener noreferrer">Manual</a>
+            <a href="https://www.blender.org/download/" target="_blank" rel="noopener noreferrer">Download</a>  
+            <a href="#" class="menuDesplagable">Menú</a>
+            <aside style="display: none;">
+                <ul class="despegableFormato">
+                    <li><a href="#preguntas">Preguntas</a></li>
+                    <li><a href="#layout">Layout</a></li>
+                    <li><a href="#modeling">Modeling</a></li>
+                    <li><a href="#sculpting">Sculpting</a></li>
+                    <li><a href="#uvEdting">UV Edting</a></li>
+                    <li><a href="#texturePaint">Texture Paint</a></li>
+                    <li><a href="#shading">Shading</a></li>
+                    <li><a href="#animation">Animation</a></li>
+                    <li><a href="#rendering">Rendering</a></li>
+                    <li><a href="#trailer">Trailer</a></li>
+                    <li><a href="#shaderElement">Shader element</a></li>
+                </ul>
+            </aside>
         </nav>
     </header>
     <div class="espaciado" id="title"></div>
@@ -717,7 +708,8 @@
                     </table>
                 </article>
             </section>            
-            <img src="src/img/resultBlender.jpg" alt="">
+            <img src="src/img/resultBlender.jpg" alt="" id="imgRender">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum recusandae tempore voluptatum perferendis quasi quam fugiat harum, esse obcaecati sit nobis alias voluptate ea quas dicta perspiciatis pariatur nisi doloremque.</p>
         </div>
     </section>
     <div class="espaciado" id="trailer"></div>
@@ -743,7 +735,7 @@
         </section>
     </section>
     <div class="espaciado"></div>
-    <footer>
+    <footer class="footer">
         <section class="contactarnos">
             <form action="#" method="post">
                 <ul>
@@ -753,11 +745,18 @@
                     </li>
                     <li>
                         <label for="like">¿Te gusto la página?</label>
-                        <select name="usuarioLike" id="like">
-                            <option value="si">Sí</option>
-                            <option value="masomenos">Masomenos</option>
-                            <option value="no">No</option>
-                        </select>
+                        <div class="calificacion">
+                            <label for="star1" title="1 star">★</label>
+                            <input type="radio" id="star1" name="calificacion" value="1">
+                            <label for="star2" title="2 star">★</label>
+                            <input type="radio" id="star2" name="calificacion" value="2">
+                            <label for="star3" title="3 star">★</label>
+                            <input type="radio" id="star3" name="calificacion" value="3">
+                            <label for="star4" title="4 star">★</label>
+                            <input type="radio" id="star4" name="calificacion" value="4">
+                            <label for="star5" title="5 star">★</label>
+                            <input type="radio" id="star5" name="calificacion" value="5">
+                        </div>
                     </li>
                     <li>
                         <label for="coment">Comentario</label>
@@ -765,9 +764,11 @@
                     </li>
                     <button type="submit">Enviar</button>
                 </ul>
-            </form>  
-            <a href="https://wa.link/p2eoeo" class="contactarnos--whatsapp">Contactar al WhatsApp</a>               
+            </form>              
         </section>
+        <div id="whatsApp">
+            <a href="https://wa.link/p2eoeo" id="contactarnosWhatsapp">Contactar al WhatsApp</a>
+        </div>   
         <p id="derechosAutor">Derechos de autor &copy; Juan Nicolas Flores Delgado</p>
     </footer>
 </body>
