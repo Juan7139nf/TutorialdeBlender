@@ -1,50 +1,102 @@
 *{
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --texto: #ffffff;
+    --texto1: #000000;
+    --background: #111111;
+    --background1: #222222;
+    --background2: #333333;
+    --background3: #444444;
+    --colorPrincipal: #ffa500;
+    --colorSecundario: #00ffa5;
+    --colorTerciario: #dddddd;
 }
 body{
     font-family: 'Alkatra', cursive;
-    background-color: #111111;
-    color: #ffffff;
+    background-color: var(--background);
+    color: var(--texto);
     .espaciado{
-        height: 30px;
+        height: 54px;
     }
 }
 body::-webkit-scrollbar{
     width: 10px;
 }
 body::-webkit-scrollbar-thumb{
-    background-color: #ffa500;
+    background-color: var(--colorPrincipal);
     border-radius: 5px;
 }
 header{
-    position: sticky;
-    top: 0;
-    background-color: #ffa500;
+    position: fixed;
+    background-color: var(--colorPrincipal);
     width: 100%;    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     #logo{
         font-weight: bold;
-    }
-    & nav{
-        width: 90%;
+        font-size: 20px;
     }
     .desplegableContenido{
-        display: flex;
         text-align: right;
-        width: 80%;
+        width: 100%;
+        #webOficialHeader{
+            width: 76px;
+        }
     }
     & li{
         list-style: none;
     }
     & a{    
-        color: #ffffff;
-        text-decoration: none;
-        padding: 0 20px;      
+        color: var(--texto);
+        text-decoration: none; 
+        padding: 0 20px;  
         border-radius: 6px;
-        background-color: #ffa500;
+        background-color: var(--colorPrincipal);
     }
     & a:hover{
-        color: #000000;
-        background-color: #00ffa5;
+        color: var(--texto1);
+        background-color: var(--colorSecundario);
+    }
+    .menuApareceDesaparece{
+        position: fixed;
+        background-color: var(--colorPrincipal);
+        width: 150px;
+        height: 410px;
+        right: -150px;
+        border-radius: 0 0 0 13px;
+        text-align: center;
+        z-index: -1;
+        .despegableFormato{
+            padding-top: 15px;
+            & li{
+                margin: 7px 0;
+            }
+        }
+    }
+    #menuCheck{
+        display: none;
+    }
+    .menuDesing{
+        color: var(--texto);
+        padding: 0 20px;  
+        border-radius: 6px;
+        background-color: var(--colorPrincipal);
+        cursor: pointer;
+    }
+    .menuDesing:hover{        
+        color: var(--texto1);
+        background-color: var(--colorSecundario);
+    }
+    #menuCheck:checked ~ .menuDesing{
+        color: var(--texto1);
+        background-color: var(--colorSecundario);
+    }
+    #menuCheck:checked ~ .menuApareceDesaparece{
+        right: 0;
     }
 }
 #title{
@@ -53,14 +105,14 @@ header{
 h1{
     text-align: center;
     font-size: 80px;    
-    color: #ffffff;
+    color: var(--texto);
 }
 h2{
     margin: 0px 20px;
-    color: #ffa500;
+    color: var(--colorPrincipal);
 }
 h3{
-    color: #ffffff;
+    color: var(--texto);
     text-align: center;
 }
 h4{
@@ -71,14 +123,14 @@ h4{
     width: 95%;
     margin: 0 auto;
     border-radius: 8px;
-    background-color: #222222;
-    border-left: 5px solid #ffa500;
+    background-color: var(--background1);
+    border-left: 5px solid var(--colorPrincipal);
     padding-bottom: 7px;
     .atajo{
         width: 98%;
         margin: 0 auto;
         border-radius: 9px;
-        background-color: #333333;
+        background-color: var(--background2);
         padding-bottom: 5px;        
         text-align: right;
         #imgRender{
@@ -89,25 +141,24 @@ h4{
             margin: 0 auto;
             display: grid;
             gap: 20px;
-            background-color: #444444;
+            background-color: var(--background3);
             border-radius: 10px;
             .tablas{
                 width: auto;
                 height: auto;
                 margin: 20px;
                 padding: 0 10px;
-                border: 1px solid #ddd;
+                border: 1px solid var(--colorTerciario);
                 border-radius: 5px;
                 & table{
-                    width: auto;
                     border-collapse: collapse;
                     margin-bottom: 10px;
                     & td{
-                        border: 1px solid #ddd;
+                        border: 1px solid var(--colorTerciario);
                         padding: 8px;
                         text-align: left;
                         & b{
-                            color: #ffa500;
+                            color: var(--colorPrincipal);
                         }
                     }
                 }
@@ -118,15 +169,15 @@ h4{
 .footer{
     background-color: #000000;
     border-radius: 0 50px 0 0;
-    border-top: 11px solid #ffa500;
-    border-right: 5px solid #ffa500;
+    border-top: 11px solid var(--colorPrincipal);
+    border-right: 5px solid var(--colorPrincipal);
     justify-content: space-between;
     .contactarnos{
         height: 350px;
         padding: 15px;
         & li > label{
             display: block;
-            color: #ffa500;
+            color: var(--colorPrincipal);
         }
         & input[type="text"], textarea{
             border-radius: 7px;
@@ -136,6 +187,12 @@ h4{
             font-family: 'Alkatra', cursive;
             margin-bottom: 10px;
         }
+        & input::placeholder{
+            color: var(--colorPrincipal);
+        }
+        & textarea::placeholder{
+            color: var(--colorPrincipal);
+        }
         .calificacion{
             margin: 0 auto;
             display: flexbox;
@@ -143,16 +200,16 @@ h4{
             & label{
                 padding: 0 15px;
                 cursor: pointer;
-                color: #777777;
+                color: var(--colorTerciario);
             }
             & input[type="radio"]{
                 display: none;
             }
-            & label:hover ~ label{
-                color: #ffa500;
+            & input[type="radio"]:hover ~ label{
+                color: #fffb00;
             }
             & input[type="radio"]:checked ~ label{
-                color: #ffa500;
+                color: #fffb00;
             }
         }
         & button{            
@@ -163,20 +220,30 @@ h4{
             cursor: pointer;
             margin-bottom: 17px;
             border-radius: 6px;
-            background-color: #00ffa5;
+            background-color: var(--colorSecundario);
         }
         & button:hover{
-            background-color: #ffa500;
-            color: #ffffff;
+            background-color: var(--colorPrincipal);
+            color: var(--texto);
         }
     }    
     #whatsApp{
         text-align: center;
     }
     #contactarnosWhatsapp{
+        text-decoration: none;
+        padding: 0 20px;
+        background-color: #0e9931;
+        color: #ffffff;
         font-size: 18px;
+        border-radius: 8px;
+        border: 3px solid #ffffff;
+    }
+    #contactarnosWhatsapp:hover{
+        background-color: #00ffa5;
     }
     #derechosAutor{
+        width: 100%;
         text-align: right;
         padding: 20px 25px;
     }
