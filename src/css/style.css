@@ -31,14 +31,19 @@ body::-webkit-scrollbar-thumb{
 }
 header{
     position: fixed;
-    background-color: var(--colorPrincipal);
+    background-color: var(--texto1);
     width: 100%;    
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 4px solid var(--colorPrincipal);
     #logo{
         font-weight: bold;
         font-size: 20px;
+        color: var(--colorPrincipal);
+    }
+    #logo:hover{
+        color: var(--texto1);
     }
     .desplegableContenido{
         text-align: right;
@@ -55,19 +60,20 @@ header{
         text-decoration: none; 
         padding: 0 20px;  
         border-radius: 6px;
-        background-color: var(--colorPrincipal);
+        background-color: var(--texto1);
     }
     & a:hover{
         color: var(--texto1);
-        background-color: var(--colorSecundario);
+        background-color: var(--colorPrincipal);
     }
     .menuApareceDesaparece{
         position: fixed;
-        background-color: var(--colorPrincipal);
+        background-color: var(--texto1);
         width: 150px;
         height: 410px;
         right: -150px;
-        border-radius: 0 0 0 13px;
+        top: 60px;
+        border-radius: 13px 0 0 13px;
         text-align: center;
         z-index: -1;
         .despegableFormato{
@@ -84,12 +90,12 @@ header{
         color: var(--texto);
         padding: 0 20px;  
         border-radius: 6px;
-        background-color: var(--colorPrincipal);
+        background-color: var(--texto1);
         cursor: pointer;
     }
     .menuDesing:hover{        
         color: var(--texto1);
-        background-color: var(--colorSecundario);
+        background-color: var(--colorPrincipal);
     }
     #menuCheck:checked ~ .menuDesing{
         color: var(--texto1);
@@ -105,7 +111,7 @@ header{
 h1{
     text-align: center;
     font-size: 80px;    
-    color: var(--texto);
+    color: var(--colorPrincipal);
 }
 h2{
     margin: 0px 20px;
@@ -118,6 +124,28 @@ h3{
 h4{
     text-align: center;
     margin: 1px;
+}
+.sectionPreguntas{
+    background-color: var(--background1);
+    & h2{
+        font-size: 30px;
+    }
+    .bloqueGrid{
+        background-color: var(--colorPrincipal);
+        gap: 10px;
+        width: 96%;
+        margin: 0 auto;
+        & h3{
+            color: var(--texto);
+            background-color: var(--colorPrincipal);
+        }
+        & img{
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            object-position: top;
+        }
+    }
 }
 .section{
     width: 95%;
@@ -132,8 +160,9 @@ h4{
         border-radius: 9px;
         background-color: var(--background2);
         padding-bottom: 5px;        
-        text-align: right;
+        text-align: center;
         #imgRender{
+            width: 90%;
             border-radius: 50px;
         }
         .bloqueGrid{
@@ -186,6 +215,7 @@ h4{
             font-size: 18px;            
             font-family: 'Alkatra', cursive;
             margin-bottom: 10px;
+            text-transform: capitalize;
         }
         & input::placeholder{
             color: var(--colorPrincipal);
