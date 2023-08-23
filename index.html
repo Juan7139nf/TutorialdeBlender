@@ -3,14 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tutorial de Blender</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alkatra:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>Blender Tutorial</title>
     <link rel="stylesheet" href="src/css/style.css">
 </head>
-<body>
-    <header class="header">
+<body>  
+    <header>
         <a href="#" id="logo">Blender</a>
         <nav class="desplegableContenido">
             <a href="#trailer">Trailer</a>
@@ -38,739 +35,732 @@
             </div>
         </div>
     </header>
-    <div class="espaciado" id="title"></div>
-    <h1>Blender</h1>
-    <div class="espaciado" id="preguntas"></div>
-    <section class="sectionPreguntas">
-        <h2>Preguntas</h2>
-        <div id="preguntas" style="display: block;">
-            <section class="bloqueGrid">
-                <article class="visualizarimg">
-                    <h3>¿Qué es la Topología y Retopología?</h3>
-                    <dl>
-                        <dd><b>Topología:</b> Es la estructura de la malla tridimensional de un objeto 3D formado de vértices, aristas y caras para formar la forma del objeto. Esto es escencial para lograr un modelado limpio que es capaz de deformarse correctamente durante la animación y el rigging.</dd>
-                        <dd><b>Retopología:</b> Es ajustar la topología de un objeto 3D para mejorar la calidad del modelo, corregir problemas de topología y adaptar un modelo de alta resolución para el uso en animación o juegos en tiempo real. En la retopología es importante mantener detalles escenciales o coplejos y reducir detalles en zonas simples que no tienen muchos detalles.</dd>
-                    </dl>
-                </article>
-                <article class="visualizarimg1">
-                    <h3>¿Qué son los Workspace?</h3>
-                    <img src="src/img/workspaceBlender.jpg" alt="">
-                    <p>Son espacios de trabajo diseñados para realizar una tarea especifica.</p>
-                </article>
-                <article class="visualizarimg">
-                    <h3>¿Qué es Layout (Diseño)?</h3>
-                    <img src="src/img/layoutBlender.jpg" alt="">
-                    <p>Este es el espacio de trabajo predeterminado que ofrece una interfaz equilibrada con ventanas 3D, de nodos y propiedades.</p>
-                </article>
-                <article class="visualizarimg1">
-                    <h3>¿Qué es Modeling (Modelado)?</h3>
-                    <img src="src/img/modelingBlender.jpg" alt="">
-                    <p>Optimizado para la creación y manipulación de geometría en 3D.</p>
-                </article>
-                <article class="visualizarimg">
-                    <h3>¿Qué es Sculpting (Esculpir)?</h3>
-                    <img src="src/img/sculptingBlender.jpg" alt="">
-                    <p>Diseñado para esculpir y modelar detalles orgánicos en modelos.</p>
-                </article>
-                <article class="visualizarimg1">
-                    <h3>¿Qué es UV Edting (Edición de UV)?</h3>
-                    <img src="src/img/uvEdtingBlender.jpg" alt="">
-                    <p>Para desplegar y editar las coordenadas UV de modelos.</p>            
-                </article>
-                <article class="visualizarimg">
-                    <h3>¿Qué es Texture Paint (Pintura de Texturas)?</h3>
-                    <img src="src/img/texturePaintBlender.jpg" alt="">
-                    <p>Para pintar directamente sobre modelos en 3D.</p>
-                </article>
-                <article class="visualizarimg1">
-                    <h3>¿Qué es Shading (Sombreado)?</h3>
-                    <img src="src/img/shadingBlender.jpg" alt="">
-                    <p>Enfocado en la creación y ajuste de materiales y texturas.</p>
-                </article>
-                <article class="visualizarimg">
-                    <h3>¿Qué es Animation (Animación)?</h3>
-                    <img src="src/img/animationBlender.jpg" alt="">
-                    <p>Diseñado para la creación y manipulación de animaciones.</p>
-                </article>
-                <article class="visualizarimg1">
-                    <h3>¿Qué es Rendering (Renderizado)?</h3>
-                    <img src="src/img/renderingBlender.jpg" alt="">
-                    <p>Enfocado en configurar y ajustar opciones de renderizado.</p>
-                </article>
-            </section>                
-        </div>
-    </section>
-    <div class="espaciado" id="layout"></div>
-    <section class="section">
-        <h2>Layout (Diseño)</h2>
-        <div class="atajo" style="display: block;">
-            <h3>Atajos de teclado</h3>
-            <section class="bloqueGrid">
-                <article class="tablas">
-                    <table>
-                        <h4>Archivo</h4>
-                        <tr>
-                            <td>Guardar</td>
-                            <td><b>Ctrl </b>+<b> S</b></td>
-                        </tr>
-                        <tr>
-                            <td>Guardar como</td>
-                            <td><b>Ctrl </b>+<b> Shift </b>+<b> S</b></td>
-                        </tr>
-                        <tr>
-                            <td>Nuevo Archivo</td>
-                            <td><b>Ctrl </b>+<b> N</b></td>
-                        </tr>
-                        <tr>
-                            <td>Cerrar Blender</td>
-                            <td><b>Ctrl </b>+<b> Q</b></td>
-                        </tr>
-                    </table>
-                </article>
-            </section>
-        </div>
-    </section>    
-    <div class="espaciado" id="modeling"></div>
-    <section class="section">
-        <h2>Modeling (Modelado)</h2>
-        <div class="atajo" style="display: block;">
-            <h3>Atajos de teclado</h3>
-            <section class="bloqueGrid">
-                <article class="tablas">
-                    <table>
-                        <h4>Selección</h4>
-                        <tr>
-                            <td>Selección de Vértices</td>
-                            <td><b>1</b></td>
-                        </tr>
-                        <tr>
-                            <td>Selección de Aristas</td>
-                            <td><b>2</b></td>
-                        </tr>
-                        <tr>
-                            <td>Selección de Caras</td>
-                            <td><b>3</b></td>
-                        </tr>
-                        <tr>
-                            <td>Crecer / Reducir selección</td>
-                            <td><b>Ctrl </b>+<b> + / -</b></td>
-                        </tr>
-                        <tr>
-                            <td>Seleccionar Loop de Aristas</td>
-                            <td><b>Alt </b>+<b> Botón Derecho Ratón</b></td>
-                        </tr>
-                        <tr>
-                            <td>Seleccionar Aristas Paralelas (Edge ring)</td>
-                            <td><b>Ctrl </b>+<b>Alt </b>+<b> Botón Derecho Ratón</td>
-                        </tr>
-                    </table>
-                </article>
-                <article class="tablas">
-                    <table>
-                        <h4>Herramientas</h4>
-                        <tr>
-                            <td>Extrude</td>
-                            <td><b>E</b></td>
-                        </tr>
-                        <tr>
-                            <td>Bevel</td>
-                            <td><b>Ctrl </b>+<b> B</b></td>
-                        </tr>
-                        <tr>
-                            <td>Loopcut</td>
-                            <td><b>Ctrl </b>+<b> R</b></td>
-                        </tr>
-                        <tr>
-                            <td>Knife Cut</td>
-                            <td><b>K</b></td>
-                        </tr>
-                        <tr>
-                            <td>Inset</td>
-                            <td><b>I</b></td>
-                        </tr>
-                        <tr>
-                            <td>Separate</td>
-                            <td><b>P</b></td>
-                        </tr>
-                        <tr>
-                            <td>Unwrap</td>
-                            <td><b>U</b></td>
-                        </tr>
-                        <tr>
-                            <td>Fill Face</td>
-                            <td><b>F</b></td>
-                        </tr>
-                        <tr>
-                            <td>Shrink/Fatten</td>
-                            <td><b>Alt </b>+<b> S</b></td>
-                        </tr>
-                        <tr>
-                            <td>Rip Fill</td>
-                            <td><b>Ctrl </b>+<b> V</b></td>
-                        </tr>
-                        <tr>
-                            <td>Shear</td>
-                            <td><b>Shift </b>+<b> Ctrl </b>+<b> Alt </b>+<b> S</b></td>
-                        </tr>
-                        <tr>
-                            <td>To Sphere</td>
-                            <td><b>Shift </b>+<b> Alt </b>+<b> S</b></td>
-                        </tr>                        
-                        <tr>
-                            <td>Split</td>
-                            <td><b>Y</b></td>
-                        </tr>
-                        <tr>
-                            <td>Rip</td>
-                            <td><b>V</b></td>
-                        </tr>
-                        <tr>
-                            <td>Triangulate</td>
-                            <td><b>Ctrl </b>+<b> T</b></td>
-                        </tr>
-                        <tr>
-                            <td>Merge Selected</td>
-                            <td><b>Alt </b>+<b> M</b></td>
-                        </tr>
-                        <tr>
-                            <td>Recalculate Normals</td>
-                            <td><b>Shift </b>+<b> N</b></td>
-                        </tr>
-                    </table>
-                </article>
-                <article class="tablas">
-                    <table>
-                        <h4>Edición Proporcional</h4>
-                        <tr>
-                            <td>Edición Proporcional</td>
-                            <td><b>O</b></td>
-                        </tr>
-                        <tr>
-                            <td>Edición Proporcional Conectados</td>
-                            <td><b>Alt </b>+<b> O</b></td>
-                        </tr>
-                    </table>
-                </article>
-                <article class="tablas">
-                    <table>
-                        <h4>Grupos de Vértices</h4>
-                        <tr>
-                            <td>Asignar a un grupo de vértices</td>
-                            <td><b>Ctrl </b>+<b> G</b></td>
-                        </tr>
-                        <tr>
-                            <td>Eliminar de un grupo de vértices</td>
-                            <td><b>Ctrl </b>+<b> Alt </b>+<b> G</b></td>
-                        </tr>
-                    </table>
-                </article>
-                <article class="tablas">
-                    <table>
-                        <h4>Ocultar / Desocultar</h4>
-                        <tr>
-                            <td>Ocultar</td>
-                            <td><b>H</b></td>
-                        </tr>
-                        <tr>
-                            <td>Desocultar</td>
-                            <td><b>Alt </b>+<b> H</b></td>
-                        </tr>
-                    </table>
-                </article>
-            </section>
-        </div>
-    </section>
-    <div class="espaciado" id="sculpting"></div>
-    <section class="section">
-        <h2>Sculpting (Esculpir)</h2>
-        <div class="atajo" style="display: block;">
-            <h3>Atajos de teclado</h3>
-            <section class="bloqueGrid">
-                <article class="tablas">
-                    <table>
-                        <h4>Control</h4>
-                        <tr>
-                            <td>Modo de Trazado</td>
-                            <td><b>E</b></td>
-                        </tr>
-                        <tr>
-                            <td>Control del ángulo</td>
-                            <td><b>R</b></td>
-                        </tr>
-                        <tr>
-                            <td>Tamaño Brocha</td>
-                            <td><b>F</b></td>
-                        </tr>
-                        <tr>
-                            <td>Fuerza Brocha</td>
-                            <td><b>Shift </b>+<b> F</b></td>
-                        </tr>                        
-                        <tr>
-                            <td>Ángulo Brocha</td>
-                            <td><b>Ctrl </b>+<b> F</b></td>
-                        </tr>
-                    </table>
-                </article>
-                <article class="tablas">
-                    <table>
-                        <h4>BROCHAS(BRUSHES)</h4>
-                        <tr>
-                            <td>Mover</td>
-                            <td><b>G</b></td>
-                        </tr>
-                        <tr>
-                            <td>Ocultar Rectangular</td>
-                            <td><b>B</b></td>
-                        </tr>
-                        <tr>
-                            <td>Inflate (hinchar)</td>
-                            <td><b>I</b></td>
-                        </tr>                        
-                        <tr>
-                            <td>Snake Hook</td>
-                            <td><b>K</b></td>
-                        </tr>
-                        <tr>
-                            <td>Layer (capa)</td>
-                            <td><b>L</b></td>
-                        </tr>
-                        <tr>
-                            <td>Pinch (pellizcar)</td>
-                            <td><b>P</b></td>
-                        </tr>
-                        <tr>
-                            <td>Smooth (suavizar)</td>
-                            <td><b>S</b></td>
-                        </tr>
-                        <tr>
-                            <td>Draw (dibujar)</td>
-                            <td><b>X</b></td>
-                        </tr>
-                        <tr>
-                            <td>Clay</td>
-                            <td><b>C</b></td>
-                        </tr>
-                        <tr>
-                            <td>Crease</td>
-                            <td><b>Shift </b>+<b> C</b></td>
-                        </tr>    
-                        <tr>
-                            <td>Flatten</td>
-                            <td><b>Shift </b>+<b> T</b></td>
-                        </tr>    
-                        <tr>
-                            <td>ClayStrips</td>
-                            <td><b>Shift </b>+<b> Espacio, 1</b></td>
-                        </tr>
-                        <tr>
-                            <td>Blob</td>
-                            <td><b>Shift </b>+<b> Espacio, 2</b></td>
-                        </tr>
-                        <tr>
-                            <td>Fill</td>
-                            <td><b>Shift </b>+<b> Espacio, 3</b></td>
-                        </tr>
-                        <tr>
-                            <td>Scrape</td>
-                            <td><b>Shift </b>+<b> Espacio, 4</b></td>
-                        </tr>
-                        <tr>
-                            <td>Thumb</td>
-                            <td><b>Shift </b>+<b> Espacio, 5</b></td>
-                        </tr>
-                        <tr>
-                            <td>Nudge</td>
-                            <td><b>Shift </b>+<b> Espacio, 6</b></td>
-                        </tr>
-                        <tr>
-                            <td>Rotar</td>
-                            <td><b>Shift </b>+<b> Espacio, 7</b></td>
-                        </tr>
-                        <tr>
-                            <td>Simplify</td>
-                            <td><b>Shift </b>+<b> Espacio, 9</b></td>
-                        </tr>
-                    </table>
-                </article>
-            </section>
-        </div>
-    </section>
-    <div class="espaciado" id="uvEdting"></div>
-    <section class="section">
-        <h2>UV Edting (Edición de UV)</h2>
-        <div class="atajo" style="display: block;">
-            <h3>Atajos de teclado</h3>
-            <section class="bloqueGrid">
-                <article class="tablas">
-                    <table>
-                        <h4>Editor de UV</h4>
-                        <tr>
-                            <td>Seleccionar Todo</td>
-                            <td><b>A</b></td>
-                        </tr>
-                        <tr>
-                            <td>Deshacer última acción</td>
-                            <td><b>Ctrl </b>+<b> Z</b></td>
-                        </tr>
-                        <tr>
-                            <td>Rehacer acción</td>
-                            <td><b>Ctrl </b>+<b> Shift </b>+<b> Z</b></td>
-                        </tr>
-                        <tr>
-                            <td>Cortar la Selección</td>
-                            <td><b>Ctrl </b>+<b> X</b></td>
-                        </tr>
-                        <tr>
-                            <td>Copiar la Selección</td>
-                            <td><b>Ctrl </b>+<b> C</b></td>
-                        </tr>
-                        <tr>
-                            <td>Pegar la Selección</td>
-                            <td><b>Ctrl </b>+<b> V</b></td>
-                        </tr>
-                        <tr>
-                            <td>Duplicar la Selección</td>
-                            <td><b>Shift </b>+<b> D</b></td>
-                        </tr>
-                        <tr>
-                            <td>Girar UVs</td>
-                            <td><b>R</b></td>
-                        </tr>
-                        <tr>
-                            <td>Escalar UVs</td>
-                            <td><b>S</b></td>
-                        </tr>
-                        <tr>
-                            <td>Desplazar UVs</td>
-                            <td><b>G</b></td>
-                        </tr>                        
-                        <tr>
-                            <td>Mostrar Coordenadas UV</td>
-                            <td><b>N</b></td>
-                        </tr>
-                        <tr>
-                            <td>Mostrar Panel de Herramientas</td>
-                            <td><b>T</b></td>
-                        </tr>
-                    </table>
-                </article>
-            </section>
-        </div>
-    </section>
-    <div class="espaciado" id="texturePaint"></div>
-    <section class="section">
-        <h2>Texture Paint (Pintura de Texturas)</h2>
-        <div class="atajo" style="display: block;">
-            <h3>Atajos de teclado</h3>
-            <section class="bloqueGrid">
-                <article class="tablas">
-                    <table>
-                        <h4>Paint (Editor Imagen)</h4>                        
-                        <tr>                            
-                            <td>Cambiar a modo Pincel</td>
-                            <td><b>T</b></td>
-                        </tr>
-                        <tr>                            
-                            <td>Cambiar tamaño de Pincel más Grande</td>
-                            <td><b>F</b></td>
-                        </tr>
-                        <tr>
-                            <td>Cambiar tamaño de Pincel más pequeño</td>
-                            <td><b>Shift </b>+<b> F</b></td>
-                        </tr>
-                        <tr>
-                            <td>Cambiar Intensidad de Pincel</td>
-                            <td><b>Shift </b>+<b> I</b></td>
-                        </tr>
-                        <tr>                            
-                            <td>Cambiar Color de Pincel</td>
-                            <td><b>K</b></td>
-                        </tr>
-                        <tr>                            
-                            <td>Cambiar a Herramienta de Pincel</td>
-                            <td><b>B</b></td>
-                        </tr>                        
-                        <tr>                            
-                            <td>Cambiar a Herramienta de Borrador</td>
-                            <td><b>E</b></td>
-                        </tr>                        
-                        <tr>                            
-                            <td>Cambiar a Eerramienta de Clonar</td>
-                            <td><b>C</b></td>
-                        </tr>
-                        <tr>
-                            <td>Cambiar a Herramienta de Borrado de Manchas</td>
-                            <td><b>Shift </b>+<b> E</b></td>
-                        </tr>                        
-                        <tr>                            
-                            <td>Cambiar a Herramienta de Mano Alzada</td>
-                            <td><b>D</b></td>
-                        </tr>                        
-                        <tr>                            
-                            <td>Cambiar a Herramienta de Línea</td>
-                            <td><b>U</b></td>
-                        </tr>
-                        <tr>
-                            <td>Cambiar a Herramienta de rellenar</td>
-                            <td><b>Ctrl </b>+<b> F</b></td>
-                        </tr>                        
-                        <tr>                            
-                            <td>Alternar Muestra de Máscara</td>
-                            <td><b>M</b></td>
-                        </tr>
-                        <tr>
-                            <td>Cambiar Modo de Mezcla de Pincel</td>
-                            <td><b>Shift </b>+<b> S</b></td>
-                        </tr>     
-                        <tr>
-                            <td>Alternar Muestra de Panel de Texturas</td>
-                            <td><b>Shift </b>+<b> T</b></td>
-                        </tr>     
-                    </table>
-                </article>
-            </section>
-        </div>
-    </section>
-    <div class="espaciado" id="shading"></div>
-    <section class="section">
-        <h2>Shading (Sombreado)</h2>
-        <div class="atajo" style="display: block;">
-            <h3>Atajos de teclado</h3>
-            <section class="bloqueGrid">
-                <article class="tablas">
-                    <table>
-                        <h4>Editor de Shaders / Compositing</h4>
-                        <tr>
-                            <td>Agrupar</td>
-                            <td><b>Ctrl </b>+<b> G</b></td>
-                        </tr>
-                        <tr>
-                            <td>Desagrupar</td>
-                            <td><b>Ctrl </b>+<b> Alt </b>+<b> G</b></td>
-                        </tr>
-                        <tr>
-                            <td>Editar Grupo</td>
-                            <td><b>Tab</b></td>
-                        </tr>
-                        <tr>
-                            <td>Juntar en nuevo marco</td>
-                            <td><b>Ctrl </b>+<b> J</b></td>
-                        </tr>
-                        <tr>
-                            <td>Cortar enlaces</td>
-                            <td><b>Shift </b>+<b> Space, 7</b></td>
-                        </tr>
-                        <tr>
-                            <td>DesagruparBorrar con reconexión</td>
-                            <td><b>Ctrl </b>+<b> X</b></td>
-                        </tr>
-                        <tr>
-                            <td>Añadir nuevo nodo / Buscar</td>
-                            <td><b>Shift </b>+<b> A</b></td>
-                        </tr>
-                        <tr>                            
-                            <td>Eliminar Nodo</td>
-                            <td><b>X</b></td>
-                        </tr>
-                        <tr>                            
-                            <td>Mover editor</td>
-                            <td><b>Botón Central Ratón</b></td>
-                        </tr>
-                    </table>
-                </article>
-                <article class="tablas">
-                    <table>
-                        <h4>Editor de UV</h4>
-                        <tr>
-                            <td>Marcar Seams (Costuras)</td>
-                            <td><b>Ctrl </b>+<b> E</b></td>
-                        </tr>
-                        <tr>
-                            <td>Seleccionar Split</td>
-                            <td><b>Y</b></td>
-                        </tr>
-                        <tr>
-                            <td>Crecer / Decrecer selección</td>
-                            <td><b>Ctrl </b>+<b> + / -</b></td>
-                        </tr>
-                        <tr>
-                            <td>Stitch (Coser)</td>
-                            <td><b>V</b></td>
-                        </tr>
-                        <tr>
-                            <td>Pin</td>
-                            <td><b>P</b></td>
-                        </tr>
-                        <tr>
-                            <td>Unpin</td>
-                            <td><b>Alt </b>+<b> P</b></td>
-                        </tr>
-                    </table>
-                </article>
-                <article class="tablas">
-                    <table>
-                        <h4>Paint (Editor Imagen)</h4>                        
-                        <tr>                            
-                            <td>Muestra de Color</td>
-                            <td><b>S</b></td>
-                        </tr>
-                        <tr>                            
-                            <td>Tamaño Brocha</td>
-                            <td><b>F</b></td>
-                        </tr>
-                        <tr>
-                            <td>Fuerza Brocha</td>
-                            <td><b>Shift </b>+<b> F</b></td>
-                        </tr>
-                        <tr>                            
-                            <td>Dar la vuelta a los clores (Flip)</td>
-                            <td><b>X</b></td>
-                        </tr>
-                    </table>
-                </article>
-            </section>
-        </div>
-    </section>
-    <div class="espaciado" id="animation"></div>
-    <section class="section">
-        <h2 id="animation">Animation (Animación)</h2>
-        <div class="atajo" style="display: block;">
-            <h3>Atajos de teclado</h3>
-            <section class="bloqueGrid">
-                <article class="tablas">
-                    <table>
-                        <h4>Keyframes</h4>
-                        <tr>
-                            <td>Insertar Keyframes</td>
-                            <td><b>I</b></td>
-                        </tr>
-                        <tr>
-                            <td>Borrar Keyframe</td>
-                            <td><b>Alt </b>+<b> I</b></td>
-                        </tr>
-                    </table>
-                </article>
-                <article class="tablas">
-                    <table>
-                        <h4>Animación</h4>
-                        <tr>
-                            <td>Reproducir / Parar Reproducción</td>
-                            <td><b>Espacio</b></td>
-                        </tr>
-                        <tr>
-                            <td>Reproducir / Parar Reproducción Reverso</td>
-                            <td><b>Ctrl </b>+<b> Shift </b>+<b> Espacio</b></td>
-                        </tr>
-                        <tr>
-                            <td>Siguiente / Anterior Fotograma</td>
-                            <td><b>Izquierda / Derecha</b></td>
-                        </tr>
-                        <tr>
-                            <td>Saltar al primero / último Fotograma</td>
-                            <td><b>Shift </b>+<b> Izquierda / Derecha</b></td>
-                        </tr>
-                        <tr>
-                            <td>Cambiar entre Fotogramas / Segundos</td>
-                            <td><b>Ctrl </b>+<b> T</b></td>
-                        </tr>
-                        <tr>
-                            <td>Reflejar Keyframes</td>
-                            <td><b>Ctrl </b>+<b> M</b></td>
-                        </tr>
-                        <tr>
-                            <td>Samplear Keyframes</td>
-                            <td><b>Shift </b>+<b> Alt </b>+<b> O</b></td>
-                        </tr>
-                        <tr>
-                            <td>Seleccionar Más / Menos</td>
-                            <td><b>Ctrl </b>+<b> +/-</b></td>
-                        </tr>
-                    </table>
-                </article>
-            </section>
-        </div>
-    </section>
-    <div class="espaciado"  id="rendering"></div>
-    <section class="section">
-        <h2>Rendering (Renderizado)</h2>
-        <div class="atajo" style="display: block;">
-            <h3>Atajos de teclado</h3>
-            <section class="bloqueGrid">
-                <article class="tablas">
-                    <table>
-                        <h4>Render</h4>
-                        <tr>
-                            <td>Renderizar Imagen</td>
-                            <td><b>F12</b></td>
-                        </tr>
-                        <tr>
-                            <td>Renderizar Animación</td>
-                            <td><b>Ctrl </b>+<b> F12</b></td>
-                        </tr>
-                    </table>
-                </article>
-            </section>            
-            <img src="src/img/resultBlender.jpg" alt="" id="imgRender">
-        </div>
-    </section>
-    <div class="espaciado" id="trailer"></div>
-    <section class="section">
-        <h2>Trailer de Blender</h2>
-        <section class="trailer">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/BnY2JdBrvaI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/QRqY_20ti9A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/ZbvTS1pmN0s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/YbL-rJv3BpI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        </section>
-    </section>
-    <div class="espaciado" id="shaderElement"></div>
-    <section  class="section">            
-        <h2>Shader Element</h2>
-        <section id="imageShaders">
-            <img src="src/img/shaders01.jpg" alt="">
-            <img src="src/img/shaders02.jpg" alt="">
-            <img src="src/img/shaders03.jpg" alt="">
-            <img src="src/img/shaders04.jpg" alt="">
-            <img src="src/img/shaders05.jpg" alt="">
-            <img src="src/img/shaders06.jpg" alt="">
-        </section>
-    </section>
-    <div class="espaciado"></div>
-    <footer class="footer">
-        <section class="contactarnos">
-            <form action="#" method="post">
-                <ul>
-                    <li>
-                        <label for="name">¿Cuál es tu nombre o apodo?</label>
-                        <input type="text" name="usuarioName" id="name" placeholder="Obligatorio">
-                    </li>
-                    <li>
-                        <label for="like">¿Te gusto la página?</label>
-                        <div class="calificacion">
-                            <input type="radio" id="star1" name="calificacion" value="1">
-                            <label for="star1" title="1 star" class="star1">★</label>                       
-                            <input type="radio" id="star2" name="calificacion" value="2">     
-                            <label for="star2" title="2 star" class="star2">★</label>
-                            <input type="radio" id="star3" name="calificacion" value="3">
-                            <label for="star3" title="3 star" class="star3">★</label>
-                            <input type="radio" id="star4" name="calificacion" value="4">
-                            <label for="star4" title="4 star" class="star4">★</label>
-                            <input type="radio" id="star5" name="calificacion" value="5">
-                            <label for="star5" title="5 star" class="star5">★</label>
+    <main>
+        <div class="espaciado" id="title"></div>
+        <h1>Blender Tutorial</h1>
+        <div class="espaciado" id="preguntas"></div>
+        <section class="sectionPreguntas">
+            <h2>Preguntas</h2>
+            <div id="preguntasVizualizar">
+                <section class="bloqueGridPreguntas">
+                    <article class="visualizarimgText">
+                        <h3>¿Qué es la Topología y Retopología?</h3>
+                        <dl>
+                            <dd><b>Topología:</b> Es la estructura de la malla tridimensional de un objeto 3D formado de vértices, aristas y caras para formar la forma del objeto. Esto es escencial para lograr un modelado limpio que es capaz de deformarse correctamente durante la animación y el rigging.</dd>
+                            <dd><b>Retopología:</b> Es ajustar la topología de un objeto 3D para mejorar la calidad del modelo, corregir problemas de topología y adaptar un modelo de alta resolución para el uso en animación o juegos en tiempo real. En la retopología es importante mantener detalles escenciales o coplejos y reducir detalles en zonas simples que no tienen muchos detalles.</dd>
+                        </dl>
+                    </article>
+                    <article class="visualizarimg1">
+                        <div class="textPreguntasVizualizar">
+                            <h3>¿Qué son los Workspace?</h3>
+                            <p>Son espacios de trabajo diseñados para realizar una tarea especifica.</p>
                         </div>
-                    </li>
-                    <li>
-                        <label for="coment">Comentario</label>
-                        <textarea name="usuarioComent" id="coment" cols="30" rows="3" placeholder="Opcional"></textarea>
-                    </li>
-                    <button type="submit">Enviar</button>
-                </ul>
-            </form>              
+                        <img src="src/img/workspaceBlender.jpg" alt="">
+                    </article>
+                    <article class="visualizarimg">
+                        <img src="src/img/layoutBlender.jpg" alt="">
+                        <h3>¿Qué es Layout (Diseño)?</h3>
+                        <p>Este es el espacio de trabajo predeterminado que ofrece una interfaz equilibrada con ventanas 3D, de nodos y propiedades.</p>
+                    </article>
+                    <article class="visualizarimg1">
+                        <h3>¿Qué es Modeling (Modelado)?</h3>
+                        <p>Optimizado para la creación y manipulación de geometría en 3D.</p>
+                        <img src="src/img/modelingBlender.jpg" alt="">
+                    </article>
+                    <article class="visualizarimg">
+                        <img src="src/img/sculptingBlender.jpg" alt="">
+                        <h3>¿Qué es Sculpting (Esculpir)?</h3>
+                        <p>Diseñado para esculpir y modelar detalles orgánicos en modelos.</p>
+                    </article>
+                    <article class="visualizarimg1">
+                        <h3>¿Qué es UV Edting (Edición de UV)?</h3>
+                        <p>Para desplegar y editar las coordenadas UV de modelos.</p>            
+                        <img src="src/img/uvEdtingBlender.jpg" alt="">
+                    </article>
+                    <article class="visualizarimg">
+                        <img src="src/img/texturePaintBlender.jpg" alt="">
+                        <h3>¿Qué es Texture Paint (Pintura de Texturas)?</h3>
+                        <p>Para pintar directamente sobre modelos en 3D.</p>
+                    </article>
+                    <article class="visualizarimg1">
+                        <h3>¿Qué es Shading (Sombreado)?</h3>
+                        <p>Enfocado en la creación y ajuste de materiales y texturas.</p>
+                        <img src="src/img/shadingBlender.jpg" alt="">
+                    </article>
+                    <article class="visualizarimg">
+                        <img src="src/img/animationBlender.jpg" alt="">
+                        <h3>¿Qué es Animation (Animación)?</h3>
+                        <p>Diseñado para la creación y manipulación de animaciones.</p>
+                    </article>
+                    <article class="visualizarimg1">
+                        <h3>¿Qué es Rendering (Renderizado)?</h3>
+                        <p>Enfocado en configurar y ajustar opciones de renderizado.</p>
+                        <img src="src/img/renderingBlender.jpg" alt="">
+                    </article>
+                </section>                
+            </div>
         </section>
-        <div id="whatsApp">
-            <a href="https://wa.link/p2eoeo" id="contactarnosWhatsapp">Contactar al WhatsApp</a>
-        </div>   
-        <p id="derechosAutor">Derechos de autor &copy; 2023 Juan Nicolas Flores Delgado</p>
+        <div class="espaciado" id="layout"></div>
+        <section class="section">
+            <h2>Layout (Diseño)</h2>
+            <div class="atajo">
+                <h3>Atajos de teclado</h3>
+                <section class="bloqueGrid">
+                    <article class="tablas">
+                        <table>
+                            <h4>Archivo</h4>
+                            <tr>
+                                <td>Guardar</td>
+                                <td><b>Ctrl </b>+<b> S</b></td>
+                            </tr>
+                            <tr>
+                                <td>Guardar como</td>
+                                <td><b>Ctrl </b>+<b> Shift </b>+<b> S</b></td>
+                            </tr>
+                            <tr>
+                                <td>Nuevo Archivo</td>
+                                <td><b>Ctrl </b>+<b> N</b></td>
+                            </tr>
+                            <tr>
+                                <td>Cerrar Blender</td>
+                                <td><b>Ctrl </b>+<b> Q</b></td>
+                            </tr>
+                        </table>
+                    </article>
+                </section>
+            </div>
+        </section>    
+        <div class="espaciado" id="modeling"></div>
+        <section class="section">
+            <h2>Modeling (Modelado)</h2>
+            <div class="atajo">
+                <h3>Atajos de teclado</h3>
+                <section class="bloqueGrid">
+                    <article class="tablas">
+                        <table>
+                            <h4>Selección</h4>
+                            <tr>
+                                <td>Selección de Vértices</td>
+                                <td><b>1</b></td>
+                            </tr>
+                            <tr>
+                                <td>Selección de Aristas</td>
+                                <td><b>2</b></td>
+                            </tr>
+                            <tr>
+                                <td>Selección de Caras</td>
+                                <td><b>3</b></td>
+                            </tr>
+                            <tr>
+                                <td>Crecer / Reducir selección</td>
+                                <td><b>Ctrl </b>+<b> + / -</b></td>
+                            </tr>
+                            <tr>
+                                <td>Seleccionar Loop de Aristas</td>
+                                <td><b>Alt </b>+<b> Botón Derecho Ratón</b></td>
+                            </tr>
+                            <tr>
+                                <td>Seleccionar Aristas Paralelas (Edge ring)</td>
+                                <td><b>Ctrl </b>+<b>Alt </b>+<b> Botón Derecho Ratón</td>
+                            </tr>
+                        </table>
+                    </article>
+                    <article class="tablas">
+                        <table>
+                            <h4>Herramientas</h4>
+                            <tr>
+                                <td>Extrude</td>
+                                <td><b>E</b></td>
+                            </tr>
+                            <tr>
+                                <td>Bevel</td>
+                                <td><b>Ctrl </b>+<b> B</b></td>
+                            </tr>
+                            <tr>
+                                <td>Loopcut</td>
+                                <td><b>Ctrl </b>+<b> R</b></td>
+                            </tr>
+                            <tr>
+                                <td>Knife Cut</td>
+                                <td><b>K</b></td>
+                            </tr>
+                            <tr>
+                                <td>Inset</td>
+                                <td><b>I</b></td>
+                            </tr>
+                            <tr>
+                                <td>Separate</td>
+                                <td><b>P</b></td>
+                            </tr>
+                            <tr>
+                                <td>Unwrap</td>
+                                <td><b>U</b></td>
+                            </tr>
+                            <tr>
+                                <td>Fill Face</td>
+                                <td><b>F</b></td>
+                            </tr>
+                            <tr>
+                                <td>Shrink/Fatten</td>
+                                <td><b>Alt </b>+<b> S</b></td>
+                            </tr>
+                            <tr>
+                                <td>Rip Fill</td>
+                                <td><b>Ctrl </b>+<b> V</b></td>
+                            </tr>
+                            <tr>
+                                <td>Shear</td>
+                                <td><b>Shift </b>+<b> Ctrl </b>+<b> Alt </b>+<b> S</b></td>
+                            </tr>
+                            <tr>
+                                <td>To Sphere</td>
+                                <td><b>Shift </b>+<b> Alt </b>+<b> S</b></td>
+                            </tr>                        
+                            <tr>
+                                <td>Split</td>
+                                <td><b>Y</b></td>
+                            </tr>
+                            <tr>
+                                <td>Rip</td>
+                                <td><b>V</b></td>
+                            </tr>
+                            <tr>
+                                <td>Triangulate</td>
+                                <td><b>Ctrl </b>+<b> T</b></td>
+                            </tr>
+                            <tr>
+                                <td>Merge Selected</td>
+                                <td><b>Alt </b>+<b> M</b></td>
+                            </tr>
+                            <tr>
+                                <td>Recalculate Normals</td>
+                                <td><b>Shift </b>+<b> N</b></td>
+                            </tr>
+                        </table>
+                    </article>
+                    <article class="tablas">
+                        <table>
+                            <h4>Edición Proporcional</h4>
+                            <tr>
+                                <td>Edición Proporcional</td>
+                                <td><b>O</b></td>
+                            </tr>
+                            <tr>
+                                <td>Edición Proporcional Conectados</td>
+                                <td><b>Alt </b>+<b> O</b></td>
+                            </tr>
+                        </table>
+                    </article>
+                    <article class="tablas">
+                        <table>
+                            <h4>Grupos de Vértices</h4>
+                            <tr>
+                                <td>Asignar a un grupo de vértices</td>
+                                <td><b>Ctrl </b>+<b> G</b></td>
+                            </tr>
+                            <tr>
+                                <td>Eliminar de un grupo de vértices</td>
+                                <td><b>Ctrl </b>+<b> Alt </b>+<b> G</b></td>
+                            </tr>
+                        </table>
+                    </article>
+                    <article class="tablas">
+                        <table>
+                            <h4>Ocultar / Desocultar</h4>
+                            <tr>
+                                <td>Ocultar</td>
+                                <td><b>H</b></td>
+                            </tr>
+                            <tr>
+                                <td>Desocultar</td>
+                                <td><b>Alt </b>+<b> H</b></td>
+                            </tr>
+                        </table>
+                    </article>
+                </section>
+            </div>
+        </section>
+        <div class="espaciado" id="sculpting"></div>
+        <section class="section">
+            <h2>Sculpting (Esculpir)</h2>
+            <div class="atajo">
+                <h3>Atajos de teclado</h3>
+                <section class="bloqueGrid">
+                    <article class="tablas">
+                        <table>
+                            <h4>Control</h4>
+                            <tr>
+                                <td>Modo de Trazado</td>
+                                <td><b>E</b></td>
+                            </tr>
+                            <tr>
+                                <td>Control del ángulo</td>
+                                <td><b>R</b></td>
+                            </tr>
+                            <tr>
+                                <td>Tamaño Brocha</td>
+                                <td><b>F</b></td>
+                            </tr>
+                            <tr>
+                                <td>Fuerza Brocha</td>
+                                <td><b>Shift </b>+<b> F</b></td>
+                            </tr>                        
+                            <tr>
+                                <td>Ángulo Brocha</td>
+                                <td><b>Ctrl </b>+<b> F</b></td>
+                            </tr>
+                        </table>
+                    </article>
+                    <article class="tablas">
+                        <table>
+                            <h4>BROCHAS(BRUSHES)</h4>
+                            <tr>
+                                <td>Mover</td>
+                                <td><b>G</b></td>
+                            </tr>
+                            <tr>
+                                <td>Ocultar Rectangular</td>
+                                <td><b>B</b></td>
+                            </tr>
+                            <tr>
+                                <td>Inflate (hinchar)</td>
+                                <td><b>I</b></td>
+                            </tr>                        
+                            <tr>
+                                <td>Snake Hook</td>
+                                <td><b>K</b></td>
+                            </tr>
+                            <tr>
+                                <td>Layer (capa)</td>
+                                <td><b>L</b></td>
+                            </tr>
+                            <tr>
+                                <td>Pinch (pellizcar)</td>
+                                <td><b>P</b></td>
+                            </tr>
+                            <tr>
+                                <td>Smooth (suavizar)</td>
+                                <td><b>S</b></td>
+                            </tr>
+                            <tr>
+                                <td>Draw (dibujar)</td>
+                                <td><b>X</b></td>
+                            </tr>
+                            <tr>
+                                <td>Clay</td>
+                                <td><b>C</b></td>
+                            </tr>
+                            <tr>
+                                <td>Crease</td>
+                                <td><b>Shift </b>+<b> C</b></td>
+                            </tr>    
+                            <tr>
+                                <td>Flatten</td>
+                                <td><b>Shift </b>+<b> T</b></td>
+                            </tr>    
+                            <tr>
+                                <td>ClayStrips</td>
+                                <td><b>Shift </b>+<b> Espacio, 1</b></td>
+                            </tr>
+                            <tr>
+                                <td>Blob</td>
+                                <td><b>Shift </b>+<b> Espacio, 2</b></td>
+                            </tr>
+                            <tr>
+                                <td>Fill</td>
+                                <td><b>Shift </b>+<b> Espacio, 3</b></td>
+                            </tr>
+                            <tr>
+                                <td>Scrape</td>
+                                <td><b>Shift </b>+<b> Espacio, 4</b></td>
+                            </tr>
+                            <tr>
+                                <td>Thumb</td>
+                                <td><b>Shift </b>+<b> Espacio, 5</b></td>
+                            </tr>
+                            <tr>
+                                <td>Nudge</td>
+                                <td><b>Shift </b>+<b> Espacio, 6</b></td>
+                            </tr>
+                            <tr>
+                                <td>Rotar</td>
+                                <td><b>Shift </b>+<b> Espacio, 7</b></td>
+                            </tr>
+                            <tr>
+                                <td>Simplify</td>
+                                <td><b>Shift </b>+<b> Espacio, 9</b></td>
+                            </tr>
+                        </table>
+                    </article>
+                </section>
+            </div>
+        </section>
+        <div class="espaciado" id="uvEdting"></div>
+        <section class="section">
+            <h2>UV Edting (Edición de UV)</h2>
+            <div class="atajo">
+                <h3>Atajos de teclado</h3>
+                <section class="bloqueGrid">
+                    <article class="tablas">
+                        <table>
+                            <h4>Editor de UV</h4>
+                            <tr>
+                                <td>Seleccionar Todo</td>
+                                <td><b>A</b></td>
+                            </tr>
+                            <tr>
+                                <td>Deshacer última acción</td>
+                                <td><b>Ctrl </b>+<b> Z</b></td>
+                            </tr>
+                            <tr>
+                                <td>Rehacer acción</td>
+                                <td><b>Ctrl </b>+<b> Shift </b>+<b> Z</b></td>
+                            </tr>
+                            <tr>
+                                <td>Cortar la Selección</td>
+                                <td><b>Ctrl </b>+<b> X</b></td>
+                            </tr>
+                            <tr>
+                                <td>Copiar la Selección</td>
+                                <td><b>Ctrl </b>+<b> C</b></td>
+                            </tr>
+                            <tr>
+                                <td>Pegar la Selección</td>
+                                <td><b>Ctrl </b>+<b> V</b></td>
+                            </tr>
+                            <tr>
+                                <td>Duplicar la Selección</td>
+                                <td><b>Shift </b>+<b> D</b></td>
+                            </tr>
+                            <tr>
+                                <td>Girar UVs</td>
+                                <td><b>R</b></td>
+                            </tr>
+                            <tr>
+                                <td>Escalar UVs</td>
+                                <td><b>S</b></td>
+                            </tr>
+                            <tr>
+                                <td>Desplazar UVs</td>
+                                <td><b>G</b></td>
+                            </tr>                        
+                            <tr>
+                                <td>Mostrar Coordenadas UV</td>
+                                <td><b>N</b></td>
+                            </tr>
+                            <tr>
+                                <td>Mostrar Panel de Herramientas</td>
+                                <td><b>T</b></td>
+                            </tr>
+                        </table>
+                    </article>
+                </section>
+            </div>
+        </section>
+        <div class="espaciado" id="texturePaint"></div>
+        <section class="section">
+            <h2>Texture Paint (Pintura de Texturas)</h2>
+            <div class="atajo">
+                <h3>Atajos de teclado</h3>
+                <section class="bloqueGrid">
+                    <article class="tablas">
+                        <table>
+                            <h4>Paint (Editor Imagen)</h4>                        
+                            <tr>                            
+                                <td>Cambiar a modo Pincel</td>
+                                <td><b>T</b></td>
+                            </tr>
+                            <tr>                            
+                                <td>Cambiar tamaño de Pincel más Grande</td>
+                                <td><b>F</b></td>
+                            </tr>
+                            <tr>
+                                <td>Cambiar tamaño de Pincel más pequeño</td>
+                                <td><b>Shift </b>+<b> F</b></td>
+                            </tr>
+                            <tr>
+                                <td>Cambiar Intensidad de Pincel</td>
+                                <td><b>Shift </b>+<b> I</b></td>
+                            </tr>
+                            <tr>                            
+                                <td>Cambiar Color de Pincel</td>
+                                <td><b>K</b></td>
+                            </tr>
+                            <tr>                            
+                                <td>Cambiar a Herramienta de Pincel</td>
+                                <td><b>B</b></td>
+                            </tr>                        
+                            <tr>                            
+                                <td>Cambiar a Herramienta de Borrador</td>
+                                <td><b>E</b></td>
+                            </tr>                        
+                            <tr>                            
+                                <td>Cambiar a Eerramienta de Clonar</td>
+                                <td><b>C</b></td>
+                            </tr>
+                            <tr>
+                                <td>Cambiar a Herramienta de Borrado de Manchas</td>
+                                <td><b>Shift </b>+<b> E</b></td>
+                            </tr>                        
+                            <tr>                            
+                                <td>Cambiar a Herramienta de Mano Alzada</td>
+                                <td><b>D</b></td>
+                            </tr>                        
+                            <tr>                            
+                                <td>Cambiar a Herramienta de Línea</td>
+                                <td><b>U</b></td>
+                            </tr>
+                            <tr>
+                                <td>Cambiar a Herramienta de rellenar</td>
+                                <td><b>Ctrl </b>+<b> F</b></td>
+                            </tr>                        
+                            <tr>                            
+                                <td>Alternar Muestra de Máscara</td>
+                                <td><b>M</b></td>
+                            </tr>
+                            <tr>
+                                <td>Cambiar Modo de Mezcla de Pincel</td>
+                                <td><b>Shift </b>+<b> S</b></td>
+                            </tr>     
+                            <tr>
+                                <td>Alternar Muestra de Panel de Texturas</td>
+                                <td><b>Shift </b>+<b> T</b></td>
+                            </tr>     
+                        </table>
+                    </article>
+                </section>
+            </div>
+        </section>
+        <div class="espaciado" id="shading"></div>
+        <section class="section">
+            <h2>Shading (Sombreado)</h2>
+            <div class="atajo">
+                <h3>Atajos de teclado</h3>
+                <section class="bloqueGrid">
+                    <article class="tablas">
+                        <table>
+                            <h4>Editor de Shaders / Compositing</h4>
+                            <tr>
+                                <td>Agrupar</td>
+                                <td><b>Ctrl </b>+<b> G</b></td>
+                            </tr>
+                            <tr>
+                                <td>Desagrupar</td>
+                                <td><b>Ctrl </b>+<b> Alt </b>+<b> G</b></td>
+                            </tr>
+                            <tr>
+                                <td>Editar Grupo</td>
+                                <td><b>Tab</b></td>
+                            </tr>
+                            <tr>
+                                <td>Juntar en nuevo marco</td>
+                                <td><b>Ctrl </b>+<b> J</b></td>
+                            </tr>
+                            <tr>
+                                <td>Cortar enlaces</td>
+                                <td><b>Shift </b>+<b> Space, 7</b></td>
+                            </tr>
+                            <tr>
+                                <td>DesagruparBorrar con reconexión</td>
+                                <td><b>Ctrl </b>+<b> X</b></td>
+                            </tr>
+                            <tr>
+                                <td>Añadir nuevo nodo / Buscar</td>
+                                <td><b>Shift </b>+<b> A</b></td>
+                            </tr>
+                            <tr>                            
+                                <td>Eliminar Nodo</td>
+                                <td><b>X</b></td>
+                            </tr>
+                            <tr>                            
+                                <td>Mover editor</td>
+                                <td><b>Botón Central Ratón</b></td>
+                            </tr>
+                        </table>
+                    </article>
+                    <article class="tablas">
+                        <table>
+                            <h4>Editor de UV</h4>
+                            <tr>
+                                <td>Marcar Seams (Costuras)</td>
+                                <td><b>Ctrl </b>+<b> E</b></td>
+                            </tr>
+                            <tr>
+                                <td>Seleccionar Split</td>
+                                <td><b>Y</b></td>
+                            </tr>
+                            <tr>
+                                <td>Crecer / Decrecer selección</td>
+                                <td><b>Ctrl </b>+<b> + / -</b></td>
+                            </tr>
+                            <tr>
+                                <td>Stitch (Coser)</td>
+                                <td><b>V</b></td>
+                            </tr>
+                            <tr>
+                                <td>Pin</td>
+                                <td><b>P</b></td>
+                            </tr>
+                            <tr>
+                                <td>Unpin</td>
+                                <td><b>Alt </b>+<b> P</b></td>
+                            </tr>
+                        </table>
+                    </article>
+                    <article class="tablas">
+                        <table>
+                            <h4>Paint (Editor Imagen)</h4>                        
+                            <tr>                            
+                                <td>Muestra de Color</td>
+                                <td><b>S</b></td>
+                            </tr>
+                            <tr>                            
+                                <td>Tamaño Brocha</td>
+                                <td><b>F</b></td>
+                            </tr>
+                            <tr>
+                                <td>Fuerza Brocha</td>
+                                <td><b>Shift </b>+<b> F</b></td>
+                            </tr>
+                            <tr>                            
+                                <td>Dar la vuelta a los clores (Flip)</td>
+                                <td><b>X</b></td>
+                            </tr>
+                        </table>
+                    </article>
+                </section>
+            </div>
+        </section>
+        <div class="espaciado" id="animation"></div>
+        <section class="section">
+            <h2 id="animation">Animation (Animación)</h2>
+            <div class="atajo">
+                <h3>Atajos de teclado</h3>
+                <section class="bloqueGrid">
+                    <article class="tablas">
+                        <table>
+                            <h4>Keyframes</h4>
+                            <tr>
+                                <td>Insertar Keyframes</td>
+                                <td><b>I</b></td>
+                            </tr>
+                            <tr>
+                                <td>Borrar Keyframe</td>
+                                <td><b>Alt </b>+<b> I</b></td>
+                            </tr>
+                        </table>
+                    </article>
+                    <article class="tablas">
+                        <table>
+                            <h4>Animación</h4>
+                            <tr>
+                                <td>Reproducir / Parar Reproducción</td>
+                                <td><b>Espacio</b></td>
+                            </tr>
+                            <tr>
+                                <td>Reproducir / Parar Reproducción Reverso</td>
+                                <td><b>Ctrl </b>+<b> Shift </b>+<b> Espacio</b></td>
+                            </tr>
+                            <tr>
+                                <td>Siguiente / Anterior Fotograma</td>
+                                <td><b>Izquierda / Derecha</b></td>
+                            </tr>
+                            <tr>
+                                <td>Saltar al primero / último Fotograma</td>
+                                <td><b>Shift </b>+<b> Izquierda / Derecha</b></td>
+                            </tr>
+                            <tr>
+                                <td>Cambiar entre Fotogramas / Segundos</td>
+                                <td><b>Ctrl </b>+<b> T</b></td>
+                            </tr>
+                            <tr>
+                                <td>Reflejar Keyframes</td>
+                                <td><b>Ctrl </b>+<b> M</b></td>
+                            </tr>
+                            <tr>
+                                <td>Samplear Keyframes</td>
+                                <td><b>Shift </b>+<b> Alt </b>+<b> O</b></td>
+                            </tr>
+                            <tr>
+                                <td>Seleccionar Más / Menos</td>
+                                <td><b>Ctrl </b>+<b> +/-</b></td>
+                            </tr>
+                        </table>
+                    </article>
+                </section>
+            </div>
+        </section>
+        <div class="espaciado"  id="rendering"></div>
+        <section class="section">
+            <h2>Rendering (Renderizado)</h2>
+            <div class="atajo">
+                <h3>Atajos de teclado</h3>
+                <section class="bloqueGrid">
+                    <article class="tablas">
+                        <table>
+                            <h4>Render</h4>
+                            <tr>
+                                <td>Renderizar Imagen</td>
+                                <td><b>F12</b></td>
+                            </tr>
+                            <tr>
+                                <td>Renderizar Animación</td>
+                                <td><b>Ctrl </b>+<b> F12</b></td>
+                            </tr>
+                        </table>
+                    </article>
+                </section>            
+                <img src="src/img/resultBlender.jpg" alt="" id="imgRender">
+            </div>
+        </section>
+        <div class="espaciado" id="trailer"></div>
+        <section class="section">
+            <h2>Trailer de Blender</h2>
+            <section class="trailer">
+                <iframe src="https://www.youtube.com/embed/BnY2JdBrvaI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/QRqY_20ti9A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/ZbvTS1pmN0s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/YbL-rJv3BpI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </section>
+        </section>
+        <div class="espaciado" id="shaderElement"></div>
+        <section  class="section">            
+            <h2>Shader Element</h2>
+            <section id="imageShaders">
+                <img src="src/img/shaders01.jpg" alt="">
+                <img src="src/img/shaders02.jpg" alt="">
+                <img src="src/img/shaders03.jpg" alt="">
+                <img src="src/img/shaders04.jpg" alt="">
+                <img src="src/img/shaders05.jpg" alt="">
+                <img src="src/img/shaders06.jpg" alt="">
+            </section>
+        </section>
+        <div class="espaciado"></div>
+        <section class="contactar">
+            <form action="#" method="post">
+                <div class="datosPersonales">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required placeholder="tú nombre">
+                </div>
+                <div class="datosPersonales">
+                    <label for="apellido">Apellido:</label>
+                    <input type="text" id="apellido" name="apellido" required placeholder="tú apellido">
+                </div>
+                <div id="edad">
+                    <label for="edad">Edad:</label>
+                    <input type="number" id="edad" name="edad" required max="100" min="5" placeholder="tú edad">
+                </div>
+                <label for="comentario">Comentario:</label>
+                <textarea id="comentario" name="comentario" rows="4" required placeholder="Comenta"></textarea>
+                <label for="archivo">Subir archivo:</label>
+                <input type="file" id="archivo" name="archivo">
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <a href="https://wa.link/p2eoeo" target="_blank" rel="noopener noreferrer">Contactar al WhatsApp</a>
+        <p>Juan Nicolas Flores Delgado<br>&copy; 2023 Blender Tutorial<br>Derechos de autor.</p>
     </footer>
 </body>
 </html>
