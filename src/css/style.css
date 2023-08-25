@@ -21,7 +21,7 @@
     --backgroundMain: #111;
     --background1: #000;
     --background2: #151515;
-    --background3: #00ff37;
+    --background3: #00ffa5;
     --texto: #fff;
     --colorPrincipal: #ffa500;
     --colorLines: #afafaf;
@@ -61,6 +61,9 @@ header{
     .desplegableContenido{
         text-align: right;
         width: 100%;
+        @media (max-width: 768px){
+            display: none;
+        }
     }
     & li{
         list-style: none;
@@ -71,6 +74,7 @@ header{
         font-size: 20px;
         padding: 4px 20px;  
         border-radius: 6px;
+        transition: background-color 0.5s, color 1s;
     }
     & a:hover{
         color: var(--backgroundBody);
@@ -98,18 +102,73 @@ header{
         display: none;
     }
     .menuDesing{
-        color: var(--texto);
-        padding: 4px;
-        border-radius: 6px;
         cursor: pointer;
+        .menuHamburger{
+            width: 41px;
+            height: 41px;
+            justify-content: center;
+            background-color: var(--background1);
+            border-radius: 56% 44% 82% 18% / 21% 20% 80% 79% ;
+            transition: background-color 0.5s;
+            .lineHamburgerArriba{
+                top: 7.8px;
+                margin-left: 5px;
+                position: absolute;
+                width: 30px;
+                height: 4px;
+                border-radius: 2px;
+                background-color: var(--texto);
+                transition: background-color 1s;
+            }
+            .lineHamburger{
+                top: 19px;
+                margin-left: 5px;
+                position: absolute;
+                width: 25px;
+                height: 4px;
+                border-radius: 2px;
+                background-color: var(--texto);
+                transition: background-color 1s;
+            }
+            .lineHamburgerAbajo{
+                top: 30px;
+                margin-left: 5px;
+                position: absolute;
+                width: 20px;
+                height: 4px;
+                border-radius: 2px;
+                background-color: var(--texto);
+                transition: background-color 1s;
+            }
+        }
     }
     .menuDesing:hover{        
-        color: #000;
-        background-color: var(--colorPrincipal);
+        .menuHamburger{
+            background-color: var(--colorPrincipal);
+            .lineHamburgerArriba{
+                background-color: var(--backgroundBody);
+            }
+            .lineHamburger{
+                background-color: var(--backgroundBody);
+            }
+            .lineHamburgerAbajo{
+                background-color: var(--backgroundBody);
+            }
+        }
     }
-    #menuCheck:checked ~ .menuDesing{
-        color: #000;
-        background-color: var(--colorPrincipal);
+    #menuCheck:checked ~ .menuDesing{   
+        .menuHamburger{
+            background-color: var(--background3);
+            .lineHamburgerArriba{
+                background-color: var(--backgroundBody);
+            }
+            .lineHamburger{
+                background-color: var(--backgroundBody);
+            }
+            .lineHamburgerAbajo{
+                background-color: var(--backgroundBody);
+            }
+        }
     }
     #menuCheck:checked ~ .menuApareceDesaparece{
         right: 0;
@@ -132,6 +191,11 @@ main {
         max-width: 500px;
         margin: 0 auto;
         animation: titulo 2s ease-in-out;
+        transition: border-radius 3s, text-shadow 4s;
+    }
+    & h1:hover{
+        border-radius: 83% 17% 21% 79% / 57% 23% 77% 43%;
+        text-shadow: -30px 20px var(--colorPrincipal), 30px -20px teal;
     }
     & h2{
         text-align: center;
@@ -140,6 +204,10 @@ main {
         padding: 7px 30px;
         max-width: 400px;
         border-radius: 17% 83% 9% 91% / 75% 45% 55% 25%;
+        transition: border-radius 3s;
+    }
+    & h2:hover{
+        border-radius: 21% 79% 86% 14% / 56% 26% 74% 44%;
     }
     .sectionPreguntas{
         #preguntasVizualizar{
@@ -188,6 +256,7 @@ main {
         border-left: 5px solid var(--colorPrincipal);
         border-bottom: 7px solid var(--colorPrincipal);
         padding: 15px 5px;
+        transition: border-radius 3s;
         .atajo{
             width: 98%;
             margin: 0 auto;
@@ -225,6 +294,12 @@ main {
                     }
                 }
             }
+        }
+    }
+    .section:hover{
+        border-radius: 79% 21% 61% 39% / 56% 22% 78% 44%;
+        & h2{
+            border-radius: 21% 79% 86% 14% / 56% 26% 74% 44%;
         }
     }
     .trailer{
@@ -279,9 +354,34 @@ main {
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            transition: background-color 3s, color 2s;
+            margin-bottom: 20px;
         }
         & button:hover{
-            background-color: var(--backgroundBody);
+            background-color: var(--background3);
+            color: var(--background1);
+        }
+        .desplegableContenido{
+            display: none;
+            border-top: 3px solid var(--colorLines);
+            padding-top: 20px;
+            text-align: center;
+            width: 100%;
+            & a{
+                color: var(--texto);
+                text-decoration: none;
+                font-size: 20px;
+                padding: 4px 20px;  
+                border-radius: 6px;
+                transition: background-color 0.5s, color 1s;
+            }
+            & a:hover{
+                color: var(--backgroundBody);
+                background-color: var(--colorPrincipal);
+            }
+            @media (max-width: 768px){
+                display: block;
+            }
         }
     }
 }
@@ -294,6 +394,7 @@ footer {
     justify-content: space-between;
     align-items: center;
     & a{
+        text-align: center;
         font-weight: bold;
         text-decoration: none;
         color: var(--texto);
@@ -301,5 +402,18 @@ footer {
         border-radius: 8px;
         border: 3px solid var(--texto);
         padding: 8px 13px;
+        transition: border-radius 5s, padding-right 3s;
+        @media (max-width: 768px){
+            font-size: 15px;
+        }
+    }
+    & a:hover{
+        padding-right: 25px;
+        border-radius: 39% 61% 84% 16% / 34% 46% 54% 66% ;
+    }
+    & p{
+        @media (max-width: 768px){
+        font-size: 13px;
+        }
     }
 }
