@@ -1,13 +1,13 @@
 @keyframes titulo{
     0%{
-        text-shadow: 0px 0px var(--colorPrincipal), 0px 0px teal;
+        text-shadow: 0px 0px var(--colorPrincipal), 0px 0px var(--leter2);
         transform: scale(1.4);
     }
     70%{
-        text-shadow: 30px 20px var(--colorPrincipal), -30px -20px teal;
+        text-shadow: 30px 20px var(--colorPrincipal), -30px -20px var(--leter2);
     }
     100%{
-        text-shadow: 6px 4px var(--colorPrincipal), -6px -4px teal;
+        text-shadow: 6px 4px var(--colorPrincipal), -6px -4px var(--leter2);
         transform: scale(1);
     }
 }
@@ -15,7 +15,7 @@
     margin: 0;
     padding: 0;
 }
-:root{
+:root[data-theme="dark"]{
     --backgroundBody: #000;
     --backgroundHeaderFooter: #090909;
     --backgroundMain: #111;
@@ -25,6 +25,19 @@
     --texto: #fff;
     --colorPrincipal: #ffa500;
     --colorLines: #afafaf;
+    --leter2: #008080;
+}
+:root[data-theme="light"]{
+    --backgroundBody: #fff;
+    --backgroundHeaderFooter: #f1f1f1;
+    --backgroundMain: #eee;
+    --background1: #ddd;
+    --background2: #eee;
+    --background3: #00ffa5;
+    --texto: #000000;
+    --colorPrincipal: #ffa500;
+    --colorLines: #111;
+    --leter2: #00ffdd;
 }
 body {
     font-family: Arial, sans-serif;
@@ -184,7 +197,7 @@ main {
     & h1{
         text-align: center;
         font-size: 60px;
-        text-shadow: 6px 4px var(--colorPrincipal), -6px -4px teal;
+        text-shadow: 6px 4px var(--colorPrincipal), -6px -4px var(--leter2);
         background-color: var(--backgroundBody);
         border-radius: 57% 43% 72% 28% / 25% 56% 44% 75%;
         padding: 20px;
@@ -195,7 +208,7 @@ main {
     }
     & h1:hover{
         border-radius: 83% 17% 21% 79% / 57% 23% 77% 43%;
-        text-shadow: -30px 20px var(--colorPrincipal), 30px -20px teal;
+        text-shadow: -30px 20px var(--colorPrincipal), 30px -20px var(--leter2);
     }
     & h2{
         text-align: center;
@@ -227,11 +240,24 @@ main {
                     padding: 30px 0;
                     text-align: center;
                     columns: 550px 2;
+                    .textPreguntasVizualizar{
+                        padding-bottom: 10px;
+                        margin: auto 0;
+                    }
+                    @media (min-width: 820px){
+                        display: flex;
+                    }
                 }
                 .visualizarimg1{
                     padding: 30px 0;
                     text-align: center;
-                    columns: 550px 2;
+                    .textPreguntasVizualizar{
+                        padding-bottom: 10px;
+                        margin: auto 0;
+                    }
+                    @media (min-width: 820px){
+                        display: flex;
+                    }
                 }
                 & img{
                     width: 100%;
@@ -243,7 +269,7 @@ main {
                 }
                 & h3{
                     color: var(--colorPrincipal);
-                    padding-bottom: 15px;
+                    padding-bottom: 10px;
                 }
             }
         }
@@ -307,6 +333,10 @@ main {
         & iframe{
             width: 560px;
             height: 315px;
+            @media (max-width: 500px){
+                width: 560px;
+                height: 315px;
+            }
         }
     }
     #imageShaders{
@@ -397,7 +427,7 @@ footer {
         text-align: center;
         font-weight: bold;
         text-decoration: none;
-        color: var(--texto);
+        color: #fff;
         background-color: #0e8146;
         border-radius: 8px;
         border: 3px solid var(--texto);
