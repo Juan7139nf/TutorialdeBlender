@@ -5,9 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blender Tutorial</title>
     <link rel="stylesheet" href="src/css/style.css">
+    <script>
+        const storageTheme = localStorage.getItem('theme');
+        const systemColorScheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        const newTheme = storageTheme ?? systemColorScheme;
+        document.documentElement.setAttribute('data-theme', newTheme);
+    </script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>  
-    <header>
+<body id="body">  
+    <header id="headerBlender">
         <a href="#" id="logo">Blender</a>
         <nav class="desplegableContenido">
             <a href="#trailer">Trailer</a>
@@ -16,6 +23,25 @@
             <a href="https://www.blender.org/download/" target="_blank" rel="noopener noreferrer">Download</a>             
         </nav>
         <div id="menudesplegableHeader">
+            <div class="clarOscuro">
+                <input type="checkbox" name="" class="temaCheck">
+                <div class="temaDesing"></div>
+            </div>
+            <script>
+                document.addEventListener('DOMContentLoaded', ()=>{
+                    const swictherTheme = document.querySelector('.temaCheck');
+                    const root = document.documentElement;
+                    if (root.getAttribute('data-theme') === 'dark'){
+                        swictherTheme.checked = true;
+                    }
+                    swictherTheme.addEventListener('click', toggleTheme);
+                    function toggleTheme(){
+                        const setTheme = swictherTheme.checked ? 'dark' : 'light';
+                        root.setAttribute('data-theme', setTheme);
+                        localStorage.setItem('theme', setTheme);
+                    }
+                });
+            </script>
             <input type="checkbox" id="menuCheck">
             <label for="menuCheck" class="menuDesing">
                 <div class="menuHamburger">
@@ -24,7 +50,7 @@
                     <div class="lineHamburgerAbajo"></div>
                 </div>
             </label>
-            <div class="menuApareceDesaparece">
+            <div id="menuApareceDesaparece">
                 <ul class="despegableFormato">
                     <li><a href="#preguntas">Preguntas</a></li>
                     <li><a href="#layout">Layout</a></li>
@@ -41,7 +67,7 @@
             </div>
         </div>
     </header>
-    <main>
+    <main class="todoContenido">
         <div class="espaciado" id="title"></div>
         <h1>Blender Tutorial</h1>
         <div class="espaciado" id="preguntas"></div>
@@ -759,32 +785,50 @@
         </section>
         <div class="espaciado"></div>
         <section class="contactar">
-            <h2>Contactenos</h2>
-            <form action="#" method="post">
-                <div class="datosPersonales">
-                    <label for="nombre">Nombre:</label>
-                    <input type="text" id="nombre" name="nombre" required placeholder="tú nombre">
+            <h2 class="p-2 text-bg-warning text-white">Contactenos</h2>
+            <form class="row g-3 needs-validation" novalidate>
+                <div class="col-md-4">
+                  <label for="validationTooltip01" class="form-label">Nombre</label>
+                  <input type="text" class="form-control" id="validationTooltip01" required placeholder="tú nombre">
+                  <div class="valid-tooltip">
+                    Bien!
+                  </div>
                 </div>
-                <div class="datosPersonales">
-                    <label for="apellido">Apellido:</label>
-                    <input type="text" id="apellido" name="apellido" required placeholder="tú apellido">
+                <div class="col-md-4">
+                  <label for="validationTooltip02" class="form-label">Apellido</label>
+                  <input type="text" class="form-control" id="validationTooltip02" required placeholder="tú apellido">
+                  <div class="valid-tooltip">
+                    Bien!
+                  </div>
                 </div>
-                <div id="edad">
-                    <label for="edad">Edad:</label>
-                    <input type="number" id="edad" name="edad" required max="100" min="5" placeholder="tú edad">
+                <div class="col-md-4">
+                    <label for="validationTooltip03" class="form-label">Ciudad</label>
+                    <input type="text" class="form-control" id="validationTooltip03" required placeholder="Tú ciudad">
+                    <div class="invalid-tooltip">
+                      Introduce tu Ciudad.
+                    </div>
                 </div>
-                <label for="comentario">Comentario:</label>
-                <textarea id="comentario" name="comentario" rows="4" required placeholder="Comenta"></textarea>
-                <label for="archivo">Subir archivo:</label>
-                <input type="file" id="archivo" name="archivo">
-                <button type="submit">Enviar</button>
+                <div class="col-md-10">
+                  <label for="validationTooltip03" class="form-label">Archivo</label>
+                  <input type="file" class="form-control">
+                </div>
+                <div class="col-md-2">
+                  <label for="validationTooltip05" class="form-label">Edad</label>
+                  <input type="number" class="form-control" id="validationTooltip05" required max="100" min="5" placeholder="tú edad">
+                  <div class="invalid-tooltip">
+                    Introduce tú edad.
+                  </div>
+                </div>
+                <div class="d-grid gap-2">
+                  <button class="btn btn-warning" type="submit">Enviar</button>
+                </div>
             </form>
-            <nav class="desplegableContenido">
-                <a href="#trailer">Trailer</a>
-                <a href="https://www.blender.org/" target="_blank" rel="noopener noreferrer" id="webOficialHeader">Web Oficial</a>
-                <a href="https://docs.blender.org/manual/en/latest/index.html" target="_blank" rel="noopener noreferrer">Manual</a>
-                <a href="https://www.blender.org/download/" target="_blank" rel="noopener noreferrer">Download</a>             
-            </nav>
+            <div style="text-align: center;">
+                <a href="#trailer" class="btn btn-outline-warning">Trailer</a>
+                <a href="https://www.blender.org/" target="_blank" rel="noopener noreferrer" id="webOficialHeader" class="btn btn-outline-warning">Web Oficial</a>
+                <a href="https://docs.blender.org/manual/en/latest/index.html" target="_blank" rel="noopener noreferrer" class="btn btn-outline-warning">Manual</a>
+                <a href="https://www.blender.org/download/" target="_blank" rel="noopener noreferrer" class="btn btn-outline-warning">Download</a>             
+            </div>
         </section>
     </main>
     <footer>
